@@ -4,7 +4,7 @@ Bilingual (German / English) website for **City Taxi Kaiserslautern**, with
 online booking through the taxi.de widget, the official city taxi tariff, and a
 dedicated landing page for every service we offer.
 
-Twenty-eight static pages, no database, no tracking, no cookies.
+Thirty static pages, no database, no tracking, no cookies.
 
 - **Live domain:** `citytaxi-kl.de`
 - **Stack:** Next.js 16 (App Router) · React 19 · TypeScript · Tailwind CSS 4
@@ -57,7 +57,7 @@ widget — verified, no longer an issue.
 
 ## Pages
 
-Fourteen pages per language, all prerendered as static HTML with localised slugs.
+Fifteen pages per language, all prerendered as static HTML with localised slugs.
 
 | Page | German | English | Where it is linked |
 | --- | --- | --- | --- |
@@ -67,6 +67,7 @@ Fourteen pages per language, all prerendered as static HTML with localised slugs
 | Booking | `/de/taxi-online-bestellen` | `/en/order-a-taxi-online` | menu |
 | Contact | `/de/kontakt` | `/en/contact` | menu |
 | City rides | `/de/taxi-kaiserslautern-stadtfahrten` | `/en/city-taxi-rides-kaiserslautern` | footer + service card |
+| Taxi app | `/de/taxi-app-kaiserslautern` | `/en/taxi-app-kaiserslautern` | footer |
 | Medical transport | `/de/krankenfahrten-kaiserslautern` | `/en/medical-transport-kaiserslautern` | footer + service card |
 | Large-capacity taxi | `/de/grossraumtaxi-kaiserslautern` | `/en/large-taxi-kaiserslautern` | footer + service card |
 | Courier runs | `/de/kurierfahrten-kaiserslautern` | `/en/courier-service-kaiserslautern` | footer + service card |
@@ -227,8 +228,9 @@ reviews line stays as visible text.
   `cmplz_*`), which would contradict the privacy policy's statement that this
   site sets no analytics cookies, and needs consent under GDPR/TTDSG before it
   may run. Its own snippet also declares `height="500px"` for 1426px of content.
-  That panel is reproduced natively in `AppOrder` instead: same steps, same PIN,
-  the two public store links, no third-party requests.
+  That panel is reproduced natively on its own page instead (`AppPage` +
+  `AppOrder`): same steps, same PIN, the two public store links, no third-party
+  requests.
 - **The booking widget's palette must stay light.** The colours in
   `widgetPalette` (`src/components/sections/BookingWidget.tsx`) are baked into
   the iframe URL. taxi.de **ignores `box`** and hardcodes the input fields to

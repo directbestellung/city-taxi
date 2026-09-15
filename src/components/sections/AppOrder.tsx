@@ -25,15 +25,8 @@ export default function AppOrder({ locale }: { locale: Locale }) {
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:py-20">
         <div className="grid gap-10 lg:grid-cols-[1fr_minmax(0,20rem)] lg:gap-14">
           <div className="min-w-0">
-            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent-text">
-              {t.app.eyebrow}
-            </p>
-            <h2 className="mt-3 text-2xl font-semibold tracking-tight text-balance sm:text-3xl">
-              {t.app.title}
-            </h2>
-            <p className="mt-3 max-w-xl text-sm leading-relaxed text-muted">{t.app.lead}</p>
-
-            <ol className="mt-6 space-y-3">
+            {/* The page header already carries the eyebrow, title and lead. */}
+            <ol className="space-y-3">
               {t.app.steps.map((step) => (
                 <li key={step} className="flex items-start gap-3 text-sm leading-relaxed">
                   <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-accent/15 text-accent-text">

@@ -14,6 +14,7 @@ export const pageKeys = [
   "airport",
   "airbase",
   "cityrides",
+  "app",
   "largetaxi",
   "courier",
   "business",
@@ -34,6 +35,7 @@ export const slugs: Record<Locale, Record<PageKey, string>> = {
     airport: "flughafentransfer-kaiserslautern",
     airbase: "taxi-ramstein-air-base",
     cityrides: "taxi-kaiserslautern-stadtfahrten",
+    app: "taxi-app-kaiserslautern",
     largetaxi: "grossraumtaxi-kaiserslautern",
     courier: "kurierfahrten-kaiserslautern",
     business: "geschaeftskunden-taxi-kaiserslautern",
@@ -50,6 +52,7 @@ export const slugs: Record<Locale, Record<PageKey, string>> = {
     airport: "airport-transfer-kaiserslautern",
     airbase: "taxi-ramstein-air-base",
     cityrides: "city-taxi-rides-kaiserslautern",
+    app: "taxi-app-kaiserslautern",
     largetaxi: "large-taxi-kaiserslautern",
     courier: "courier-service-kaiserslautern",
     business: "business-taxi-accounts-kaiserslautern",
@@ -83,8 +86,12 @@ export const navPages: PageKey[] = [
   "contact",
 ];
 
-/** Detail landing pages: footer only, deliberately kept out of the menu. */
-export const seoPages = [
+/**
+ * Detail pages rendered by the shared landing template, which reads its content
+ * from `landing` in the dictionaries. The app page has its own layout, so it is
+ * deliberately not one of these.
+ */
+export const landingPages = [
   "cityrides",
   "airport",
   "airbase",
@@ -94,7 +101,18 @@ export const seoPages = [
   "business",
 ] as const satisfies readonly PageKey[];
 
-/** The subset of pages rendered by the shared landing-page template. */
-export type SeoPageKey = (typeof seoPages)[number];
+export type LandingPageKey = (typeof landingPages)[number];
+
+/** Everything listed under "offers" in the footer. Kept out of the main menu. */
+export const seoPages: PageKey[] = [
+  "cityrides",
+  "app",
+  "airport",
+  "airbase",
+  "medical",
+  "largetaxi",
+  "courier",
+  "business",
+];
 
 export const footerLegalPages: PageKey[] = ["imprint", "privacy"];

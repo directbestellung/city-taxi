@@ -12,6 +12,7 @@ const de = {
     services: "Leistungen",
     tariff: "Preise",
     cityrides: "Stadtfahrten",
+    app: "Taxi App",
     largetaxi: "Großraumtaxi",
     courier: "Kurierfahrten",
     business: "Geschäftskunden",
@@ -193,6 +194,25 @@ const de = {
         "Mit einem Klick bestellen",
         "Anfahrt live verfolgen",
         "Bequem in der App bezahlen",
+      ],
+      faqHeading: "Häufige Fragen zur App",
+      faq: [
+        {
+          q: "Kostet die App etwas?",
+          a: "Nein. Die Taxi.de App ist im App Store und bei Google Play kostenlos erhältlich. Für die Fahrt selbst gilt der normale Taxitarif.",
+        },
+        {
+          q: "Wozu brauche ich die PIN?",
+          a: "Mit der PIN 24075 hinterlegen Sie City Taxi Kaiserslautern als bevorzugtes Unternehmen. Ihre Bestellungen kommen dann direkt bei uns an und nicht bei einem anderen Betrieb.",
+        },
+        {
+          q: "Muss ich die App nutzen?",
+          a: "Nein. Sie können genauso online über das Formular bestellen, uns per WhatsApp schreiben oder einfach anrufen. Die App lohnt sich vor allem, wenn Sie regelmäßig fahren.",
+        },
+        {
+          q: "Kann ich in der App bezahlen?",
+          a: "Ja, die App bietet eine Bezahlfunktion. Sie können aber weiterhin auch im Fahrzeug bezahlen.",
+        },
       ],
       appStore: "App Store",
       playStore: "Google Play",
@@ -946,6 +966,11 @@ const de = {
       title: "Taxi für Geschäftskunden in Kaiserslautern",
       description:
         "Taxi für Unternehmen in Kaiserslautern: Gästeabholung, Mitarbeiter- und Schichtfahrten, Flughafentransfers und Kurierfahrten mit festen Absprachen.",
+    },
+    app: {
+      title: "Taxi App Kaiserslautern — mit PIN 24075 bestellen",
+      description:
+        "Taxi in Kaiserslautern per App bestellen: Taxi.de App gratis laden, City Taxi Kaiserslautern mit PIN 24075 hinterlegen, per Klick bestellen und die Anfahrt live verfolgen.",
     },
     imprint: {
       title: "Impressum",

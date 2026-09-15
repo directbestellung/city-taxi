@@ -13,6 +13,7 @@ const en: Dictionary = {
     services: "Services",
     tariff: "Fares",
     cityrides: "City rides",
+    app: "Taxi app",
     largetaxi: "Large-capacity taxi",
     courier: "Courier runs",
     business: "Business accounts",
@@ -193,6 +194,25 @@ const en: Dictionary = {
         "Order with a single tap",
         "Follow your car on its way",
         "Pay straight from the app",
+      ],
+      faqHeading: "Common questions about the app",
+      faq: [
+        {
+          q: "Does the app cost anything?",
+          a: "No. The Taxi.de app is free on the App Store and Google Play. The journey itself is charged at the normal taxi tariff.",
+        },
+        {
+          q: "What is the PIN for?",
+          a: "PIN 24075 saves City Taxi Kaiserslautern as your preferred company, so your orders come to us rather than to another operator.",
+        },
+        {
+          q: "Do I have to use the app?",
+          a: "No. You can order through the online form, message us on WhatsApp, or simply call. The app is worth it mainly if you travel with us regularly.",
+        },
+        {
+          q: "Can I pay in the app?",
+          a: "Yes, the app includes payment. You can still pay in the car if you prefer.",
+        },
       ],
       appStore: "App Store",
       playStore: "Google Play",
@@ -943,6 +963,11 @@ const en: Dictionary = {
       title: "Taxi for businesses in Kaiserslautern",
       description:
         "Taxi for companies in Kaiserslautern: guest collection, staff and shift journeys, airport transfers, and courier runs under a standing arrangement.",
+    },
+    app: {
+      title: "Taxi app Kaiserslautern — order with PIN 24075",
+      description:
+        "Order a taxi in Kaiserslautern from your phone: download the free Taxi.de app, save City Taxi Kaiserslautern with PIN 24075, order with a tap and follow your car live.",
     },
     imprint: {
       title: "Imprint",

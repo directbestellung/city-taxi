@@ -1,4 +1,4 @@
-import type { SeoPageKey } from "./routes";
+import type { LandingPageKey } from "./routes";
 
 /** Icon keys the service cards know how to render. */
 export type ServiceIconName =
@@ -14,7 +14,7 @@ export type ServiceCopy = {
   body: string;
   icon: ServiceIconName;
   /** Optional link to a detail page, rendered as a "read more" on the card. */
-  link?: SeoPageKey;
+  link?: LandingPageKey;
 };
 
 export type FaqItem = { q: string; a: string };

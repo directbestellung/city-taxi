@@ -4,11 +4,11 @@ import PageHeader from "@/components/sections/PageHeader";
 import type { Dictionary } from "@/lib/i18n";
 import Link from "next/link";
 import {
+  landingPages,
   pathFor,
-  seoPages,
   type Locale,
+  type LandingPageKey,
   type PageKey,
-  type SeoPageKey,
 } from "@/lib/i18n/routes";
 import { faqJsonLd, serviceJsonLd } from "@/lib/seo";
 
@@ -18,12 +18,16 @@ export default function LandingPage({
   t,
 }: {
   locale: Locale;
-  page: SeoPageKey;
+  page: LandingPageKey;
   t: Dictionary;
 }) {
   const copy = t.landing[page];
   const faq = copy.blocks.find((block) => block.type === "faq");
-  const related: PageKey[] = [...seoPages.filter((other) => other !== page), "tariff"];
+  const related: PageKey[] = [
+    ...landingPages.filter((other) => other !== page),
+    "app",
+    "tariff",
+  ];
 
   return (
     <>

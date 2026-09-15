@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import AppPage from "@/components/pages/AppPage";
 import BookingPage from "@/components/pages/BookingPage";
 import ContactPage from "@/components/pages/ContactPage";
 import LandingPage from "@/components/pages/LandingPage";
@@ -80,6 +81,8 @@ function renderPage(locale: Locale, page: PageKey, t: Dictionary) {
       return <TariffPage locale={locale} t={t} />;
     case "booking":
       return <BookingPage locale={locale} t={t} />;
+    case "app":
+      return <AppPage locale={locale} t={t} />;
     case "contact":
       return <ContactPage locale={locale} t={t} />;
     case "medical":
