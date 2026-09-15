@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { business } from "@/lib/business";
 
 /**
  * Colours handed to taxi.de.
@@ -40,7 +41,7 @@ export const widgetPalette = {
 export const widgetSurface = `#${widgetPalette.bg}`;
 
 const SRC =
-  "https://www.taxi.de/iframessl?i=1&pref=24075&" +
+  `https://www.taxi.de/iframessl?i=1&pref=${business.taxiDePin}&` +
   Object.entries(widgetPalette)
     .map(([key, value]) => `${key}=${value}`)
     .join("&");

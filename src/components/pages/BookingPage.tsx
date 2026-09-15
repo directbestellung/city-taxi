@@ -1,3 +1,4 @@
+import AppOrder from "@/components/sections/AppOrder";
 import BookingWidget, { widgetSurface } from "@/components/sections/BookingWidget";
 import LiveStatus from "@/components/sections/LiveStatus";
 import PageHeader from "@/components/sections/PageHeader";
@@ -72,6 +73,8 @@ export default function BookingPage({
           </aside>
         </div>
       </section>
+
+      <AppOrder locale={locale} />
     </>
   );
 }

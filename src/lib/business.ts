@@ -34,6 +34,16 @@ export const business = {
   rating: { value: "5,0", valueEn: "5.0", count: 7 },
   googleProfileUrl: "https://share.google/36BqKCrpDoMk3ehDW",
 
+  /**
+   * Partner id at taxi.de. Used both by the booking widget and as the PIN
+   * customers enter in the taxi.de app to set us as their preferred firm.
+   */
+  taxiDePin: "24075",
+
+  /** Links to the taxi.de app, which customers order through with that PIN. */
+  appStoreUrl: "https://apps.apple.com/de/app/taxi-de/id481007071",
+  playStoreUrl: "https://play.google.com/store/apps/details?id=com.sic.taxibutton",
+
   /** Set false if you are not a 24/7 operation. */
   availability24h: true,
 

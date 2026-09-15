@@ -182,6 +182,22 @@ const de = {
       "Für sofortige Fahrten ist der Anruf am schnellsten. Wir sind rund um die Uhr erreichbar.",
   },
 
+    app: {
+      eyebrow: "Taxi.de App",
+      title: "Mit der App bestellen",
+      lead: "Wenn Sie öfter fahren, geht es über die kostenlose Taxi.de App am schnellsten — mit uns als hinterlegtem Unternehmen.",
+      pinLabel: "Unsere PIN",
+      steps: [
+        "Kostenlose Taxi.de App laden",
+        "City Taxi Kaiserslautern als bevorzugtes Unternehmen hinterlegen — mit der PIN oben",
+        "Mit einem Klick bestellen",
+        "Anfahrt live verfolgen",
+        "Bequem in der App bezahlen",
+      ],
+      appStore: "App Store",
+      playStore: "Google Play",
+      note: "Die App kommt von taxi.de. Beim Download und bei der Nutzung gelten deren Bedingungen und Datenschutzhinweise.",
+    },
   contact: {
     eyebrow: "Kontakt",
     title: "So erreichen Sie uns",

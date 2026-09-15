@@ -221,6 +221,14 @@ reviews line stays as visible text.
   from `www.taxi.de` and posts its height from `oldiframe.taxi.de`, so the check
   covers subdomains, not one exact origin. If the widget stops resizing, look
   there first.
+- **Do not embed the taxi.de app iframe.** taxi.de also supplies
+  `iframeapp?i=1&pref=…` for the "order via the app" panel. It loads Google Tag
+  Manager and Analytics and sets eight cookies (`_ga`, `_gid`, `_gat`, `_ga_*`,
+  `cmplz_*`), which would contradict the privacy policy's statement that this
+  site sets no analytics cookies, and needs consent under GDPR/TTDSG before it
+  may run. Its own snippet also declares `height="500px"` for 1426px of content.
+  That panel is reproduced natively in `AppOrder` instead: same steps, same PIN,
+  the two public store links, no third-party requests.
 - **The booking widget's palette must stay light.** The colours in
   `widgetPalette` (`src/components/sections/BookingWidget.tsx`) are baked into
   the iframe URL. taxi.de **ignores `box`** and hardcodes the input fields to

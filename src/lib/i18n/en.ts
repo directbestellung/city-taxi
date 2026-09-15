@@ -182,6 +182,22 @@ const en: Dictionary = {
       "For an immediate pick-up, calling is fastest. We are reachable around the clock.",
   },
 
+    app: {
+      eyebrow: "Taxi.de app",
+      title: "Order from the app",
+      lead: "If you travel with us often, the free Taxi.de app is the quickest route — with us saved as your preferred firm.",
+      pinLabel: "Our PIN",
+      steps: [
+        "Download the free Taxi.de app",
+        "Save City Taxi Kaiserslautern as your preferred company — using the PIN above",
+        "Order with a single tap",
+        "Follow your car on its way",
+        "Pay straight from the app",
+      ],
+      appStore: "App Store",
+      playStore: "Google Play",
+      note: "The app is provided by taxi.de. Their terms and privacy notice apply to downloading and using it.",
+    },
   contact: {
     eyebrow: "Contact",
     title: "How to reach us",
