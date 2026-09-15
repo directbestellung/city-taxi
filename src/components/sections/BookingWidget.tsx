@@ -69,7 +69,14 @@ function isVendorOrigin(origin: string): boolean {
 }
 
 export default function BookingWidget({ title }: { title: string }) {
-  const [height, setHeight] = useState(560);
+  /**
+   * Starts slightly UNDER the shortest real layout (~457px) on purpose.
+   * taxi.de paints #fcfcfc on its own <html>, so the body colour never reaches
+   * the canvas and any iframe taller than its content shows a white band until
+   * the resize message lands. Undershooting instead clips a few pixels for well
+   * under a second, which reads as loading rather than as a rendering fault.
+   */
+  const [height, setHeight] = useState(450);
 
   useEffect(() => {
     function onMessage(event: MessageEvent) {
@@ -92,7 +99,9 @@ export default function BookingWidget({ title }: { title: string }) {
       title={title}
       src={SRC}
       scrolling="no"
-      style={{ height: `${height}px` }}
+      // Backstop for the same problem, in case taxi.de ever drops its own
+      // <html> background: without it the element paints white underneath.
+      style={{ height: `${height}px`, background: widgetSurface }}
       className="w-full max-w-[760px] border-0"
     />
   );

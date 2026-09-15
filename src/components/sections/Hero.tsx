@@ -28,15 +28,15 @@ export default function Hero({ locale }: { locale: Locale }) {
         className="pointer-events-none absolute top-1/3 -right-40 size-[30rem] rounded-full bg-accent/8 blur-3xl"
       />
 
-      <div className="relative mx-auto grid max-w-6xl gap-8 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_minmax(0,27rem)] lg:gap-x-14 lg:py-20">
+      <div className="relative mx-auto grid max-w-6xl gap-8 px-4 py-14 sm:px-6 lg:grid-cols-[1fr_minmax(0,30rem)] lg:grid-rows-[auto_1fr] lg:gap-x-12 lg:py-20 xl:max-w-7xl xl:grid-cols-[1fr_minmax(0,37rem)] xl:gap-x-16">
         {/* Headline */}
-        <div className="flex min-w-0 flex-col justify-end lg:col-start-1 lg:row-start-1">
+        <div className="flex min-w-0 flex-col lg:col-start-1 lg:row-start-1">
           <span className="inline-flex w-fit items-center gap-2 rounded-full border border-night-border bg-white/5 px-3 py-1 text-xs font-medium text-night-muted">
             <span className="size-1.5 rounded-full bg-accent" />
             {t.home.badge}
           </span>
 
-          <h1 className="mt-5 text-4xl font-semibold leading-[1.08] tracking-tight text-balance sm:text-5xl lg:text-6xl">
+          <h1 className="mt-5 text-4xl font-semibold leading-[1.08] tracking-tight text-balance sm:text-5xl xl:text-6xl">
             {t.home.title} <span className="text-accent">{t.home.titleHighlight}</span>
           </h1>
 
@@ -46,7 +46,7 @@ export default function Hero({ locale }: { locale: Locale }) {
         </div>
 
         {/* 1 — order online */}
-        <div className="min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-center">
+        <div className="min-w-0 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:self-start">
           <LiveStatus
             locale={locale}
             label={t.home.liveLabel}
@@ -92,7 +92,7 @@ export default function Hero({ locale }: { locale: Locale }) {
         </div>
 
         {/* Supporting proof, below the form on a phone */}
-        <div className="min-w-0 lg:col-start-1 lg:row-start-2">
+        <div className="min-w-0 lg:col-start-1 lg:row-start-2 lg:self-start">
           <ul className="space-y-3">
             {t.home.trust.map((item) => (
               <li key={item} className="flex items-start gap-3 text-sm text-night-muted">
