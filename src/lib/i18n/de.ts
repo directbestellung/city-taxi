@@ -98,6 +98,10 @@ const de = {
     ],
     areaNote:
       "Ihr Ort ist nicht dabei? Rufen Sie uns an — wir fahren auch darüber hinaus.",
+    liveLabel: "Live",
+    liveStatus: "Zentrale besetzt",
+    liveNote:
+      "Echtzeit-Bestätigung von Fahrer oder Zentrale — kein Kontaktformular, das im Postfach liegen bleibt.",
     heroOr: "Oder direkt:",
     faresTitle: "Was die Fahrt kostet",
     faresLead:

@@ -98,6 +98,10 @@ const en: Dictionary = {
     ],
     areaNote:
       "Do not see your area? Give us a call — we drive beyond this list too.",
+    liveLabel: "Live",
+    liveStatus: "Dispatch staffed",
+    liveNote:
+      "Real-time confirmation from a driver or our dispatch — not a contact form sitting in an inbox.",
     heroOr: "Or reach us directly:",
     faresTitle: "What the ride costs",
     faresLead:
