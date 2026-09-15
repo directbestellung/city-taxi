@@ -53,7 +53,7 @@ export default function Hero({ locale }: { locale: Locale }) {
             status={t.home.liveStatus}
           />
 
-          {/* Panel colour comes from the widget palette, so the frame edge is invisible. */}
+          {/* Surround colour comes from the widget palette, so the frame edge is invisible. */}
           <div
             style={{ background: widgetSurface }}
             className="overflow-hidden rounded-2xl border border-night-border p-2 shadow-2xl shadow-black/30 sm:p-3"
