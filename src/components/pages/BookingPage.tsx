@@ -1,4 +1,4 @@
-import BookingWidget from "@/components/sections/BookingWidget";
+import BookingWidget, { widgetSurface } from "@/components/sections/BookingWidget";
 import PageHeader from "@/components/sections/PageHeader";
 import { PhoneIcon, WhatsAppIcon } from "@/components/Icons";
 import { business, whatsappUrl } from "@/lib/business";
@@ -12,8 +12,11 @@ export default function BookingPage({ t }: { t: Dictionary }) {
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:py-20">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-12">
           <div className="min-w-0">
-            {/* The widget is styled light by taxi.de, so it always sits on white. */}
-            <div className="overflow-hidden rounded-xl border border-border bg-white p-2 sm:p-3">
+            {/* Panel colour comes from the widget palette, so the frame edge is invisible. */}
+            <div
+              style={{ background: widgetSurface }}
+              className="overflow-hidden rounded-xl border border-night-border p-2 sm:p-3"
+            >
               <BookingWidget title={t.booking.title} />
             </div>
 

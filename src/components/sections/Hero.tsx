@@ -1,7 +1,7 @@
 import { business, whatsappUrl } from "@/lib/business";
 import { getDictionary } from "@/lib/i18n";
 import type { Locale } from "@/lib/i18n/routes";
-import BookingWidget from "./BookingWidget";
+import BookingWidget, { widgetSurface } from "./BookingWidget";
 import LiveStatus from "./LiveStatus";
 import { CheckIcon, PhoneIcon, WhatsAppIcon } from "@/components/Icons";
 
@@ -53,8 +53,11 @@ export default function Hero({ locale }: { locale: Locale }) {
             status={t.home.liveStatus}
           />
 
-          {/* taxi.de styles the widget light, so it always sits on white. */}
-          <div className="overflow-hidden rounded-2xl border border-night-border bg-white p-2 shadow-2xl shadow-black/30 sm:p-3">
+          {/* Panel colour comes from the widget palette, so the frame edge is invisible. */}
+          <div
+            style={{ background: widgetSurface }}
+            className="overflow-hidden rounded-2xl border border-night-border p-2 shadow-2xl shadow-black/30 sm:p-3"
+          >
             <BookingWidget title={t.booking.title} />
           </div>
 
