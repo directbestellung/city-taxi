@@ -19,7 +19,7 @@ export default function Footer({ locale }: { locale: Locale }) {
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
-            <Wordmark tone="night" />
+            <Wordmark tone="night" size="footer" />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-night-muted">
               {t.footer.tagline}
             </p>
