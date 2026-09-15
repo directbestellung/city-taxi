@@ -99,9 +99,9 @@ const en: Dictionary = {
     areaNote:
       "Do not see your area? Give us a call — we drive beyond this list too.",
     liveLabel: "Live",
-    liveStatus: "Dispatch staffed",
+    liveHeadline: "Order a taxi with real-time personal confirmation",
     liveNote:
-      "Real-time confirmation from a driver or our dispatch — not a contact form sitting in an inbox.",
+      "Your order goes straight to a driver and our dispatch — not a contact form sitting in an inbox.",
     heroOr: "Or reach us directly:",
     faresTitle: "What the ride costs",
     faresLead:

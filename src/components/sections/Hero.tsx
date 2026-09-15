@@ -50,7 +50,7 @@ export default function Hero({ locale }: { locale: Locale }) {
           <LiveStatus
             locale={locale}
             label={t.home.liveLabel}
-            status={t.home.liveStatus}
+            headline={t.home.liveHeadline}
           />
 
           {/* Surround colour comes from the widget palette, so the frame edge is invisible. */}

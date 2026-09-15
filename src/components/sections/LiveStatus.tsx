@@ -3,9 +3,9 @@
 import { useSyncExternalStore } from "react";
 
 /**
- * Signals that the booking widget dispatches a real car, rather than emailing a
- * form somewhere: a pulsing status dot and a clock ticking in Kaiserslautern
- * local time.
+ * Says the booking widget dispatches a real car rather than emailing a form
+ * somewhere: a pulsing LIVE badge, the promise itself, and a clock ticking in
+ * Kaiserslautern local time.
  *
  * The clock is read through useSyncExternalStore rather than an effect. The
  * server snapshot is null, so the server renders no time at all and there is
@@ -33,11 +33,11 @@ function readClock(locale: "de" | "en") {
 export default function LiveStatus({
   locale,
   label,
-  status,
+  headline,
 }: {
   locale: "de" | "en";
   label: string;
-  status: string;
+  headline: string;
 }) {
   const time = useSyncExternalStore(
     subscribe,
@@ -46,23 +46,25 @@ export default function LiveStatus({
   );
 
   return (
-    <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-1.5 rounded-lg border border-night-border bg-white/5 px-3 py-2 text-xs">
-      <span className="flex items-center gap-2 font-semibold uppercase tracking-[0.14em] text-emerald-300">
-        <span className="relative flex size-2">
+    <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-2 rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-3.5 py-3">
+      <span className="inline-flex shrink-0 items-center gap-1.5 rounded-md bg-emerald-400 px-2 py-1 text-[0.65rem] font-bold uppercase tracking-[0.16em] text-emerald-950">
+        <span className="relative flex size-1.5">
           {/* The ping is decorative; reduced-motion users just get the dot. */}
-          <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75 motion-reduce:hidden" />
-          <span className="relative inline-flex size-2 rounded-full bg-emerald-400" />
+          <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-950 opacity-75 motion-reduce:hidden" />
+          <span className="relative inline-flex size-1.5 rounded-full bg-emerald-950" />
         </span>
         {label}
       </span>
 
-      <span className="text-night-muted">{status}</span>
+      <span className="min-w-0 flex-1 text-sm font-semibold leading-snug text-night-fg">
+        {headline}
+      </span>
 
       {/* Renders only once mounted, so there is no server/client time mismatch. */}
       {time ? (
         <span
-          className="ml-auto font-mono tabular-nums text-night-fg"
-          aria-label={`${status} — ${time}`}
+          className="ml-auto shrink-0 font-mono text-sm tabular-nums text-emerald-200"
+          aria-label={`${headline} — ${time}`}
         >
           {time}
         </span>
