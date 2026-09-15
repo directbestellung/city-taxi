@@ -21,12 +21,16 @@ export default function Wordmark({
   size?: "header" | "footer";
 }) {
   if (logo) {
-    const height = size === "footer" ? 60 : 38;
+    const isFooter = size === "footer";
     return (
       <span
         className={
-          "inline-flex rounded-lg bg-white " +
-          (size === "footer" ? "px-4 py-3" : "px-2.5 py-1.5")
+          "inline-flex rounded-lg " +
+          (isFooter
+            ? "bg-white px-4 py-3"
+            : // Transparent artwork sits straight on the light header; the dark
+              // one needs the plate or the black type vanishes into it.
+              "px-2.5 py-1.5 dark:bg-white")
         }
       >
         <Image
@@ -34,9 +38,13 @@ export default function Wordmark({
           alt={business.name}
           width={logo.width}
           height={logo.height}
-          priority={size === "header"}
-          style={{ height, width: "auto" }}
-          className="max-w-full object-contain"
+          priority={!isFooter}
+          // Sized in CSS rather than inline, so it can step down on the
+          // narrowest phones — at 44px tall the header ran 1.4px past 320px.
+          className={
+            "w-auto max-w-full object-contain " +
+            (isFooter ? "h-14 sm:h-[4.5rem]" : "h-9 sm:h-11")
+          }
         />
       </span>
     );

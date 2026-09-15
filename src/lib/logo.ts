@@ -6,17 +6,15 @@
  * logo. Leave it null and the text wordmark is used, so the site is never
  * showing a broken image.
  *
- * TO ENABLE:
- *   1. Save the logo as `public/logo/city-taxi-kaiserslautern.svg`
- *      (SVG preferred — it stays sharp at any size. PNG is fine too; export it
- *      at roughly 1200px wide so it is crisp on retina screens.)
- *   2. Replace the `null` below with the block commented out underneath, and
- *      set `width`/`height` to the file's real pixel dimensions.
+ * The file has a transparent background, so it drops straight onto the light
+ * header. It cannot go straight onto a dark one: the black CITY and
+ * KAISERSLAUTERN would disappear and only the yellow TAXI would survive. So
+ * `Wordmark` gives it a white plate wherever the background is dark — always in
+ * the footer, and in the header only under a dark colour scheme.
  *
- * Note the logo is black and yellow on white, so it cannot sit directly on the
- * dark footer — the black wordmark would disappear. `Wordmark` therefore places
- * it on a white plate, which is invisible against the light header and reads as
- * a deliberate brand card against the dark footer.
+ * To swap the artwork, replace the file and update `width`/`height` to its real
+ * pixel dimensions. SVG is worth it if you have one: sharp at any size and a
+ * fraction of the weight.
  */
 export type BrandLogo = {
   src: string;
@@ -25,10 +23,8 @@ export type BrandLogo = {
   height: number;
 };
 
-export const logo: BrandLogo | null = null;
-
-// export const logo: BrandLogo | null = {
-//   src: "/logo/city-taxi-kaiserslautern.svg",
-//   width: 1200,
-//   height: 586,
-// };
+export const logo: BrandLogo | null = {
+  src: "/logo/city-taxi-kl-logo.png",
+  width: 900,
+  height: 450,
+};
