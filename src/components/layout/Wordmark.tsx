@@ -1,17 +1,15 @@
 import Image from "next/image";
 import { business } from "@/lib/business";
-import { logo } from "@/lib/logo";
+import { logo, type BrandLogo } from "@/lib/logo";
 
 /**
  * The brand mark: the real logo when one is configured, otherwise a text
  * wordmark — the name with "Taxi" picked out in the brand yellow, over a
  * tracked-out locality line.
  *
- * `tone` matters for contrast. In text mode the accent must be the darker
- * --accent-text on the light header (bright yellow fails contrast on white)
- * and the bright --accent on the dark footer. In logo mode the artwork is
- * black and yellow on white, so it gets a white plate: invisible against the
- * light header, a deliberate brand card against the dark footer.
+ * The logo comes in two variants, so it sits directly on the surface with no
+ * plate behind it. The footer is always dark and always takes the white
+ * variant; the header swaps between them with the colour scheme.
  */
 export default function Wordmark({
   tone = "default",
@@ -20,33 +18,31 @@ export default function Wordmark({
   tone?: "default" | "night";
   size?: "header" | "footer";
 }) {
+  const isFooter = size === "footer";
+  const sizeClass = isFooter ? "h-14 sm:h-[4.5rem]" : "h-9 sm:h-11";
+
   if (logo) {
-    const isFooter = size === "footer";
+    const mark = (variant: BrandLogo, className: string) => (
+      <Image
+        src={variant.src}
+        alt={business.name}
+        width={variant.width}
+        height={variant.height}
+        priority={!isFooter}
+        // Sized in CSS rather than inline so it can step down on the narrowest
+        // phones — at a flat 44px the header ran past a 320px viewport.
+        className={`w-auto max-w-full object-contain ${sizeClass} ${className}`}
+      />
+    );
+
+    // The footer is dark in both colour schemes, so it needs only one variant.
+    if (isFooter) return mark(logo.onDark, "");
+
     return (
-      <span
-        className={
-          "inline-flex rounded-lg " +
-          (isFooter
-            ? "bg-white px-4 py-3"
-            : // Transparent artwork sits straight on the light header; the dark
-              // one needs the plate or the black type vanishes into it.
-              "px-2.5 py-1.5 dark:bg-white")
-        }
-      >
-        <Image
-          src={logo.src}
-          alt={business.name}
-          width={logo.width}
-          height={logo.height}
-          priority={!isFooter}
-          // Sized in CSS rather than inline, so it can step down on the
-          // narrowest phones — at 44px tall the header ran 1.4px past 320px.
-          className={
-            "w-auto max-w-full object-contain " +
-            (isFooter ? "h-14 sm:h-[4.5rem]" : "h-9 sm:h-11")
-          }
-        />
-      </span>
+      <>
+        {mark(logo.onLight, "dark:hidden")}
+        {mark(logo.onDark, "hidden dark:block")}
+      </>
     );
   }
 

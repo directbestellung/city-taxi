@@ -1,20 +1,20 @@
 /**
- * The brand logo.
+ * The brand logo, in the two variants the artwork comes in.
  *
- * Set this once the image file is in `public/logo/` and every place that shows
- * the brand — header and footer — switches from the text wordmark to the real
- * logo. Leave it null and the text wordmark is used, so the site is never
- * showing a broken image.
+ * The mark is black and yellow, which reads on a light background but loses its
+ * black CITY and KAISERSLAUTERN against a dark one. The white-and-yellow
+ * variant is the answer to that, so each is used where it is legible:
  *
- * The file has a transparent background, so it drops straight onto the light
- * header. It cannot go straight onto a dark one: the black CITY and
- * KAISERSLAUTERN would disappear and only the yellow TAXI would survive. So
- * `Wordmark` gives it a white plate wherever the background is dark — always in
- * the footer, and in the header only under a dark colour scheme.
+ *   onLight -> the header under a light colour scheme
+ *   onDark  -> the footer, which is always dark, and the header under a dark
+ *              colour scheme
  *
- * To swap the artwork, replace the file and update `width`/`height` to its real
- * pixel dimensions. SVG is worth it if you have one: sharp at any size and a
- * fraction of the weight.
+ * Using the right variant per background is what lets the logo sit directly on
+ * the surface, with no white plate behind it.
+ *
+ * Set to null to fall back to the text wordmark. To swap the artwork, replace
+ * the files and update `width`/`height` to their real pixel dimensions — SVG is
+ * worth it if you have one: sharp at any size and a fraction of the weight.
  */
 export type BrandLogo = {
   src: string;
@@ -23,8 +23,7 @@ export type BrandLogo = {
   height: number;
 };
 
-export const logo: BrandLogo | null = {
-  src: "/logo/city-taxi-kl-logo.png",
-  width: 900,
-  height: 450,
+export const logo: { onLight: BrandLogo; onDark: BrandLogo } | null = {
+  onLight: { src: "/logo/city-taxi-kl-on-light.png", width: 900, height: 450 },
+  onDark: { src: "/logo/city-taxi-kl-on-dark.png", width: 900, height: 450 },
 };

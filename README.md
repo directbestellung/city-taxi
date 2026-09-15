@@ -158,14 +158,21 @@ Navigation, sitemap, and hreflang pick it up automatically.
 
 ## The logo
 
-`src/lib/logo.ts` is off by default, so the header and footer show a text
-wordmark. Save the artwork into `public/logo/` and fill that file in, and both
-switch to the real logo — nothing else to change.
+`public/logo/` holds two variants of the mark and `src/lib/logo.ts` maps each to
+the background it is legible on:
 
-The logo is black and yellow on white, which cannot sit directly on the dark
-footer: the black "CITY" and "KAISERSLAUTERN" would disappear. `Wordmark`
-therefore puts it on a white plate — invisible against the light header, and a
-deliberate brand card against the dark footer.
+| File | Used on |
+| --- | --- |
+| `city-taxi-kl-on-light.png` | the header under a light colour scheme |
+| `city-taxi-kl-on-dark.png` | the footer (always dark) and the header under a dark colour scheme |
+
+The black-and-yellow mark loses its black "CITY" and "KAISERSLAUTERN" against a
+dark background; the white-and-yellow one is the answer. Because the right
+variant is used per background, the logo sits directly on the surface with no
+plate behind it.
+
+Set `logo` to null to fall back to the text wordmark. SVG is worth it if you
+ever have one — sharp at any size and a fraction of the weight.
 
 ## Photos
 
