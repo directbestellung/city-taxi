@@ -20,18 +20,6 @@ function Base({ children, ...props }: IconProps & { children: React.ReactNode })
   );
 }
 
-export function TaxiIcon(props: IconProps) {
-  return (
-    <Base {...props}>
-      <path d="M9 3h6l.6 2H8.4L9 3Z" />
-      <path d="M3 17v-3.2a3 3 0 0 1 .5-1.66l2.2-3.3A3 3 0 0 1 8.2 7.5h7.6a3 3 0 0 1 2.5 1.34l2.2 3.3A3 3 0 0 1 21 13.8V17" />
-      <path d="M3 17h18v2.2a.8.8 0 0 1-.8.8h-2.4a.8.8 0 0 1-.8-.8V17" />
-      <path d="M7 20v-3" />
-      <path d="M6.5 13.5h11" />
-    </Base>
-  );
-}
-
 export function PlaneIcon(props: IconProps) {
   return (
     <Base {...props}>

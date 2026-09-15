@@ -8,7 +8,8 @@ import {
   seoPages,
   type Locale,
 } from "@/lib/i18n/routes";
-import { MailIcon, PhoneIcon, PinIcon, TaxiIcon } from "@/components/Icons";
+import { MailIcon, PhoneIcon, PinIcon } from "@/components/Icons";
+import Wordmark from "./Wordmark";
 
 export default function Footer({ locale }: { locale: Locale }) {
   const t = getDictionary(locale);
@@ -18,12 +19,7 @@ export default function Footer({ locale }: { locale: Locale }) {
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
-            <div className="flex items-center gap-2.5 font-semibold tracking-tight">
-              <span className="flex size-9 items-center justify-center rounded-lg bg-accent text-accent-fg">
-                <TaxiIcon className="size-5" />
-              </span>
-              <span className="text-base">{business.name}</span>
-            </div>
+            <Wordmark tone="night" />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-night-muted">
               {t.footer.tagline}
             </p>
