@@ -79,7 +79,7 @@ function renderPage(locale: Locale, page: PageKey, t: Dictionary) {
     case "tariff":
       return <TariffPage locale={locale} t={t} />;
     case "booking":
-      return <BookingPage t={t} />;
+      return <BookingPage locale={locale} t={t} />;
     case "contact":
       return <ContactPage locale={locale} t={t} />;
     case "medical":

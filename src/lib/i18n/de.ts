@@ -15,7 +15,7 @@ const de = {
     largetaxi: "Großraumtaxi",
     courier: "Kurierfahrten",
     business: "Geschäftskunden",
-    booking: "Taxi buchen",
+    booking: "Taxi bestellen",
     contact: "Kontakt",
     medical: "Krankenfahrten",
     airport: "Flughafentransfer",
@@ -26,7 +26,7 @@ const de = {
 
   common: {
     callNow: "Jetzt anrufen",
-    bookOnline: "Online buchen",
+    bookOnline: "Online bestellen",
     whatsapp: "WhatsApp",
     whatsappAria: "Per WhatsApp ein Taxi bestellen",
     whatsappMessage:
@@ -171,9 +171,9 @@ const de = {
   },
 
   booking: {
-    eyebrow: "Buchung",
-    title: "Taxi online buchen",
-    lead: "Abholort, Ziel und Wunschzeit eingeben — fertig. Die Bestellung läuft über das Buchungssystem von taxi.de.",
+    eyebrow: "Bestellung",
+    title: "Taxi online bestellen",
+    lead: "Abholort, Ziel und Wunschzeit eingeben — fertig. Die Bestellung läuft über das Bestellsystem von taxi.de und wird persönlich bestätigt.",
     widgetNote:
       "Hinweis: Das Formular wird von taxi.de bereitgestellt. Beim Laden werden Daten an taxi.de übertragen.",
     disclaimer: "AGB von taxi.de",
@@ -872,9 +872,9 @@ const de = {
 
   seo: {
     home: {
-      title: "Taxi Kaiserslautern — City Taxi | 24h Taxiruf",
+      title: "Taxi Kaiserslautern online bestellen — City Taxi 24h",
       description:
-        "Taxi in Kaiserslautern rund um die Uhr: Stadtfahrten, Flughafentransfer, Großraumtaxi und Kurierfahrten. Jetzt anrufen unter 0171 3553030 oder online buchen.",
+        "Taxi in Kaiserslautern online bestellen — mit persönlicher Echtzeit-Bestätigung von Fahrer oder Zentrale, rund um die Uhr. Stadtfahrten, Flughafentransfer, Großraumtaxi. Oder anrufen: 0171 3553030.",
     },
     services: {
       title: "Leistungen — Stadtfahrten, Flughafentransfer & mehr",
@@ -882,9 +882,9 @@ const de = {
         "Unsere Fahrten in Kaiserslautern: Stadtfahrten, Flughafentransfer nach Frankfurt und Hahn, Großraumtaxi, Kurierfahrten und Krankenfahrten. Abrechnung nach amtlichem Taxitarif.",
     },
     booking: {
-      title: "Taxi online buchen in Kaiserslautern",
+      title: "Taxi online bestellen in Kaiserslautern",
       description:
-        "Buchen Sie Ihr Taxi in Kaiserslautern bequem online: Abholort, Ziel und Uhrzeit eingeben. Für sofortige Fahrten erreichen Sie uns rund um die Uhr telefonisch.",
+        "Taxi online bestellen in Kaiserslautern: Abholort, Ziel und Uhrzeit eingeben — die Bestätigung kommt in Echtzeit von Fahrer oder Zentrale. Rund um die Uhr, auch für sofort.",
     },
     contact: {
       title: "Kontakt — Taxiruf Kaiserslautern",

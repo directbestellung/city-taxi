@@ -16,7 +16,7 @@ const en: Dictionary = {
     largetaxi: "Large-capacity taxi",
     courier: "Courier runs",
     business: "Business accounts",
-    booking: "Book a taxi",
+    booking: "Order a taxi",
     contact: "Contact",
     medical: "Medical transport",
     airport: "Airport transfers",
@@ -27,7 +27,7 @@ const en: Dictionary = {
 
   common: {
     callNow: "Call now",
-    bookOnline: "Book online",
+    bookOnline: "Order online",
     whatsapp: "WhatsApp",
     whatsappAria: "Order a taxi via WhatsApp",
     whatsappMessage: "Hello, I would like to order a taxi. Pick-up address: ",
@@ -172,8 +172,8 @@ const en: Dictionary = {
 
   booking: {
     eyebrow: "Booking",
-    title: "Book a taxi online",
-    lead: "Enter your pick-up point, destination, and preferred time. The booking runs through the taxi.de booking system.",
+    title: "Order a taxi online",
+    lead: "Enter your pick-up point, destination, and preferred time. The order runs through the taxi.de booking system and is confirmed personally.",
     widgetNote:
       "Note: this form is provided by taxi.de. Loading it transfers data to taxi.de.",
     disclaimer: "taxi.de terms and conditions",
@@ -869,9 +869,9 @@ const en: Dictionary = {
 
   seo: {
     home: {
-      title: "Taxi Kaiserslautern — City Taxi | 24h taxi service",
+      title: "Order a taxi online in Kaiserslautern — City Taxi 24h",
       description:
-        "Taxi in Kaiserslautern around the clock: city rides, airport transfers, large-capacity taxi, and courier runs. Call 0171 3553030 or book online.",
+        "Order a taxi in Kaiserslautern online — with real-time personal confirmation from a driver or our dispatch, around the clock. City rides, airport transfers, large-capacity taxi. Or call 0171 3553030.",
     },
     services: {
       title: "Services — city rides, airport transfers & more",
@@ -879,9 +879,9 @@ const en: Dictionary = {
         "Our journeys in Kaiserslautern: city rides, airport transfers to Frankfurt and Hahn, large-capacity taxi, courier runs, and medical journeys. Charged at the official taxi tariff.",
     },
     booking: {
-      title: "Book a taxi online in Kaiserslautern",
+      title: "Order a taxi online in Kaiserslautern",
       description:
-        "Book your taxi in Kaiserslautern online: enter pick-up point, destination, and time. For immediate journeys we are reachable by phone around the clock.",
+        "Order a taxi online in Kaiserslautern: enter pick-up point, destination, and time — confirmation comes in real time from a driver or our dispatch. Around the clock, including right now.",
     },
     contact: {
       title: "Contact — taxi service Kaiserslautern",

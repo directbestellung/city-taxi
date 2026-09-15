@@ -1,10 +1,18 @@
 import BookingWidget, { widgetSurface } from "@/components/sections/BookingWidget";
+import LiveStatus from "@/components/sections/LiveStatus";
 import PageHeader from "@/components/sections/PageHeader";
 import { PhoneIcon, WhatsAppIcon } from "@/components/Icons";
 import { business, whatsappUrl } from "@/lib/business";
 import type { Dictionary } from "@/lib/i18n";
+import type { Locale } from "@/lib/i18n/routes";
 
-export default function BookingPage({ t }: { t: Dictionary }) {
+export default function BookingPage({
+  locale,
+  t,
+}: {
+  locale: Locale;
+  t: Dictionary;
+}) {
   return (
     <>
       <PageHeader eyebrow={t.booking.eyebrow} title={t.booking.title} lead={t.booking.lead} />
@@ -12,6 +20,12 @@ export default function BookingPage({ t }: { t: Dictionary }) {
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:py-20">
         <div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_18rem] lg:gap-12">
           <div className="min-w-0">
+            <LiveStatus
+              locale={locale}
+              label={t.home.liveLabel}
+              headline={t.home.liveHeadline}
+            />
+
             {/* Panel colour comes from the widget palette, so the frame edge is invisible. */}
             <div
               style={{ background: widgetSurface }}
@@ -20,7 +34,9 @@ export default function BookingPage({ t }: { t: Dictionary }) {
               <BookingWidget title={t.booking.title} />
             </div>
 
-            <p className="mt-4 text-xs leading-relaxed text-muted">
+            <p className="mt-3 text-xs leading-relaxed text-muted">{t.home.liveNote}</p>
+
+            <p className="mt-3 text-xs leading-relaxed text-muted">
               {t.booking.widgetNote}{" "}
               <a
                 href="https://www.taxi.de/agb"

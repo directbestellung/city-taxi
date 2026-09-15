@@ -89,6 +89,24 @@ export function businessJsonLd(locale: Locale) {
     hasMap: mapsDirectionsUrl,
     sameAs: [business.googleProfileUrl],
     areaServed: { "@type": "City", name: business.city },
+    /**
+     * Declares that a ride can actually be ordered on the site, rather than
+     * only advertised there — the schema.org way to say "online booking".
+     */
+    potentialAction: {
+      "@type": "ReserveAction",
+      name: t.nav.booking,
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${siteUrl}${pathFor(locale, "booking")}`,
+        inLanguage: locale === "de" ? "de-DE" : "en-GB",
+        actionPlatform: [
+          "https://schema.org/DesktopWebPlatform",
+          "https://schema.org/MobileWebPlatform",
+        ],
+      },
+      result: { "@type": "Reservation", name: t.seo.booking.title },
+    },
     ...(business.availability24h
       ? {
           openingHoursSpecification: {
