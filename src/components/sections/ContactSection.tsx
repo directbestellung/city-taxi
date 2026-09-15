@@ -20,13 +20,6 @@ export default function ContactSection({ locale }: { locale: Locale }) {
       <div className="mt-10 grid gap-6 rounded-xl border border-border bg-surface p-6 sm:grid-cols-2 lg:p-8">
         <div className="space-y-4">
           <a
-            href={business.phoneHref}
-            className="flex w-full items-center justify-center gap-2 rounded-lg bg-accent px-4 py-3 text-sm font-semibold text-accent-fg transition hover:brightness-95"
-          >
-            <PhoneIcon className="size-4" />
-            {business.phoneDisplay}
-          </a>
-          <a
             href={whatsappUrl(t.common.whatsappMessage)}
             target="_blank"
             rel="noreferrer"
@@ -34,6 +27,13 @@ export default function ContactSection({ locale }: { locale: Locale }) {
           >
             <WhatsAppIcon className="size-4" />
             {t.common.whatsapp}
+          </a>
+          <a
+            href={business.phoneHref}
+            className="flex w-full items-center justify-center gap-2 rounded-lg border border-border px-4 py-3 text-sm font-medium transition hover:bg-surface-alt"
+          >
+            <PhoneIcon className="size-4" />
+            {business.phoneDisplay}
           </a>
           <p className="text-xs text-muted">{t.common.hours}</p>
         </div>

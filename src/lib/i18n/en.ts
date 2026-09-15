@@ -98,6 +98,7 @@ const en: Dictionary = {
     ],
     areaNote:
       "Do not see your area? Give us a call — we drive beyond this list too.",
+    heroOr: "Or reach us directly:",
     faresTitle: "What the ride costs",
     faresLead:
       "Every taxi in Kaiserslautern charges the same official tariff. Here it is, in full.",

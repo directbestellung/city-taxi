@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import BookingSection from "@/components/sections/BookingSection";
 import ContactSection from "@/components/sections/ContactSection";
 import CtaBand from "@/components/sections/CtaBand";
 import Hero from "@/components/sections/Hero";
@@ -125,11 +124,8 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         <p className="mt-8 text-sm text-muted">{t.home.areaNote}</p>
       </section>
 
-      {/* 5 — Contact */}
+      {/* 5 — Contact. Booking lives in the hero, not down here. */}
       <ContactSection locale={locale} />
-
-      {/* 6 — Booking, last so everything above has made the case */}
-      <BookingSection locale={locale} />
 
       <CtaBand locale={locale} />
     </>

@@ -98,6 +98,7 @@ const de = {
     ],
     areaNote:
       "Ihr Ort ist nicht dabei? Rufen Sie uns an — wir fahren auch darüber hinaus.",
+    heroOr: "Oder direkt:",
     faresTitle: "Was die Fahrt kostet",
     faresLead:
       "In Kaiserslautern gilt für alle Taxis derselbe amtliche Tarif. Hier ist er, vollständig.",
