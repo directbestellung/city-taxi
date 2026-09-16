@@ -18,12 +18,12 @@ export const business = {
   region: "Rheinland-Pfalz",
   countryCode: "DE",
 
-  phoneDisplay: "0171 3553030",
-  phoneIntl: "+49 171 3553030",
+  phoneDisplay: "0155 6555 4111",
+  phoneIntl: "+49 155 6555 4111",
   /** tel: href — digits only, no spaces. */
-  phoneHref: "tel:+491713553030",
+  phoneHref: "tel:+4915565554111",
   /** wa.me expects the international number without + or spaces. */
-  whatsappNumber: "491713553030",
+  whatsappNumber: "4915565554111",
 
   email: "toptaxikl@gmail.com",
 

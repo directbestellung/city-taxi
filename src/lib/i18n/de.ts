@@ -942,7 +942,7 @@ const de = {
     home: {
       title: "Taxi Kaiserslautern online bestellen — City Taxi 24h",
       description:
-        "Taxi in Kaiserslautern online bestellen — mit persönlicher Echtzeit-Bestätigung, rund um die Uhr. Oder anrufen: 0171 3553030.",
+        `Taxi in Kaiserslautern online bestellen — mit persönlicher Echtzeit-Bestätigung, rund um die Uhr. Oder anrufen: ${business.phoneDisplay}.`,
     },
     services: {
       title: "Leistungen — Stadtfahrten & Flughafentransfer",
@@ -962,7 +962,7 @@ const de = {
     medical: {
       title: "Krankenfahrten Kaiserslautern",
       description:
-        "Sitzende Krankenfahrten in Kaiserslautern: Dialyse, Chemotherapie, Arzttermine und Klinik. Wir fahren für alle Krankenkassen. Jetzt anrufen unter 0171 3553030.",
+        `Sitzende Krankenfahrten in Kaiserslautern: Dialyse, Chemotherapie, Arzttermine und Klinik. Wir fahren für alle Krankenkassen. Jetzt anrufen unter ${business.phoneDisplay}.`,
     },
     airport: {
       title: "Flughafentransfer ab Kaiserslautern",
@@ -982,17 +982,17 @@ const de = {
     cityrides: {
       title: "Stadtfahrten — Taxi in Kaiserslautern",
       description:
-        "Taxi für kurze Wege in Kaiserslautern: Hauptbahnhof, Innenstadt, Klinikum, Universität. Nach amtlichem Taxitarif, Tag und Nacht. Jetzt anrufen: 0171 3553030.",
+        `Taxi für kurze Wege in Kaiserslautern: Hauptbahnhof, Innenstadt, Klinikum, Universität. Nach amtlichem Taxitarif, Tag und Nacht. Jetzt anrufen: ${business.phoneDisplay}.`,
     },
     largetaxi: {
       title: "Großraumtaxi Kaiserslautern — bis 8 Personen",
       description:
-        "Großraumtaxi in Kaiserslautern für bis zu acht Personen und viel Gepäck — für Gruppen, Flughafentransfers und Feiern. Tel. 0171 3553030.",
+        `Großraumtaxi in Kaiserslautern für bis zu acht Personen und viel Gepäck — für Gruppen, Flughafentransfers und Feiern. Tel. ${business.phoneDisplay}.`,
     },
     courier: {
       title: "Kurierfahrten Kaiserslautern",
       description:
-        "Kurierfahrten in Kaiserslautern: Dokumente, Ersatzteile und dringende Sendungen direkt zum Empfänger, rund um die Uhr. Jetzt anrufen unter 0171 3553030.",
+        `Kurierfahrten in Kaiserslautern: Dokumente, Ersatzteile und dringende Sendungen direkt zum Empfänger, rund um die Uhr. Jetzt anrufen unter ${business.phoneDisplay}.`,
     },
     business: {
       title: "Taxi für Geschäftskunden in Kaiserslautern",

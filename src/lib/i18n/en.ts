@@ -938,7 +938,7 @@ const en: Dictionary = {
     home: {
       title: "Order a taxi online in Kaiserslautern — City Taxi 24h",
       description:
-        "Order a taxi in Kaiserslautern online — with real-time personal confirmation, around the clock. Or call 0171 3553030.",
+        `Order a taxi in Kaiserslautern online — with real-time personal confirmation, around the clock. Or call ${business.phoneDisplay}.`,
     },
     services: {
       title: "Services — city rides & airport transfers",
@@ -978,7 +978,7 @@ const en: Dictionary = {
     cityrides: {
       title: "City rides — taxi in Kaiserslautern",
       description:
-        "Taxi for short trips in Kaiserslautern: main station, downtown, hospital, university. Charged at the official taxi tariff, day and night. Call 0171 3553030.",
+        `Taxi for short trips in Kaiserslautern: main station, downtown, hospital, university. Charged at the official taxi tariff, day and night. Call ${business.phoneDisplay}.`,
     },
     largetaxi: {
       title: "Large-capacity taxi Kaiserslautern",
@@ -988,7 +988,7 @@ const en: Dictionary = {
     courier: {
       title: "Courier service in Kaiserslautern",
       description:
-        "Courier runs in Kaiserslautern: documents, spare parts, and urgent deliveries taken straight to the recipient, around the clock. Call 0171 3553030.",
+        `Courier runs in Kaiserslautern: documents, spare parts, and urgent deliveries taken straight to the recipient, around the clock. Call ${business.phoneDisplay}.`,
     },
     business: {
       title: "Taxi for businesses in Kaiserslautern",
