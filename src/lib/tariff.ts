@@ -42,9 +42,9 @@ export const tariff = {
   ],
 } as const;
 
-/** Formats euro amounts the way each locale expects: 3,50 € vs €3.50. */
+/** Formats euro amounts the way each locale expects: 3,50 € vs €3.50 (en-US). */
 export function formatEuro(amount: number, locale: "de" | "en"): string {
-  return new Intl.NumberFormat(locale === "de" ? "de-DE" : "en-IE", {
+  return new Intl.NumberFormat(locale === "de" ? "de-DE" : "en-US", {
     style: "currency",
     currency: "EUR",
   }).format(amount);

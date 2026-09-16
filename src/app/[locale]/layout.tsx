@@ -14,7 +14,9 @@ const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"]
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: { default: business.name, template: `%s | ${business.name}` },
+  // Short on purpose: nearly every page title already says Kaiserslautern, and
+  // the long form cost 27 characters of the ~60 Google shows.
+  title: { default: business.name, template: "%s | City Taxi" },
 };
 
 export function generateStaticParams() {

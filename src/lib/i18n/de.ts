@@ -910,17 +910,17 @@ const de = {
     home: {
       title: "Taxi Kaiserslautern online bestellen — City Taxi 24h",
       description:
-        "Taxi in Kaiserslautern online bestellen — mit persönlicher Echtzeit-Bestätigung von Fahrer oder Zentrale, rund um die Uhr. Stadtfahrten, Flughafentransfer, Großraumtaxi. Oder anrufen: 0171 3553030.",
+        "Taxi in Kaiserslautern online bestellen — mit persönlicher Echtzeit-Bestätigung, rund um die Uhr. Oder anrufen: 0171 3553030.",
     },
     services: {
-      title: "Leistungen — Stadtfahrten, Flughafentransfer & mehr",
+      title: "Leistungen — Stadtfahrten & Flughafentransfer",
       description:
-        "Unsere Fahrten in Kaiserslautern: Stadtfahrten, Flughafentransfer nach Frankfurt und Hahn, Großraumtaxi, Kurierfahrten und Krankenfahrten. Abrechnung nach amtlichem Taxitarif.",
+        "Stadtfahrten, Flughafentransfer, Großraumtaxi, Kurierfahrten und Krankenfahrten in Kaiserslautern — zum amtlichen Taxitarif.",
     },
     booking: {
       title: "Taxi online bestellen in Kaiserslautern",
       description:
-        "Taxi online bestellen in Kaiserslautern: Abholort, Ziel und Uhrzeit eingeben — die Bestätigung kommt in Echtzeit von Fahrer oder Zentrale. Rund um die Uhr, auch für sofort.",
+        "Taxi online bestellen in Kaiserslautern: Abholort, Ziel und Uhrzeit eingeben. Bestätigung in Echtzeit, rund um die Uhr.",
     },
     contact: {
       title: "Kontakt — Taxiruf Kaiserslautern",
@@ -928,12 +928,12 @@ const de = {
         "City Taxi Kaiserslautern, Pariser Str. 51, 67655 Kaiserslautern. Telefonisch, per WhatsApp oder online erreichbar — 24 Stunden täglich.",
     },
     medical: {
-      title: "Krankenfahrten Kaiserslautern — alle Krankenkassen",
+      title: "Krankenfahrten Kaiserslautern",
       description:
         "Sitzende Krankenfahrten in Kaiserslautern: Dialyse, Chemotherapie, Arzttermine und Klinik. Wir fahren für alle Krankenkassen. Jetzt anrufen unter 0171 3553030.",
     },
     airport: {
-      title: "Flughafentransfer Kaiserslautern — Frankfurt, Hahn & mehr",
+      title: "Flughafentransfer ab Kaiserslautern",
       description:
         "Flughafentransfer ab Kaiserslautern nach Frankfurt, Hahn, Saarbrücken und Luxemburg. Auf Anfrage zum Pauschalpreis, rund um die Uhr. Jetzt Festpreis anfragen.",
     },
@@ -943,22 +943,22 @@ const de = {
         "Was kostet ein Taxi in Kaiserslautern? Grundpreis 3,50 €, ab 2,10 € je Kilometer. Der komplette amtliche Taxitarif mit allen Zuschlägen, verständlich erklärt.",
     },
     airbase: {
-      title: "Taxi Ramstein Air Base — KMC, Landstuhl & Vogelweh",
+      title: "Taxi Ramstein Air Base & KMC",
       description:
         "Taxi zwischen Kaiserslautern und Ramstein Air Base, Landstuhl Regional Medical Center, Vogelweh und der KMC. Rund um die Uhr, Pauschalpreis auf Anfrage.",
     },
     cityrides: {
-      title: "Taxi Kaiserslautern Stadtfahrten — schnell & rund um die Uhr",
+      title: "Stadtfahrten — Taxi in Kaiserslautern",
       description:
         "Taxi für kurze Wege in Kaiserslautern: Hauptbahnhof, Innenstadt, Klinikum, Universität. Nach amtlichem Taxitarif, Tag und Nacht. Jetzt anrufen: 0171 3553030.",
     },
     largetaxi: {
       title: "Großraumtaxi Kaiserslautern — bis 8 Personen",
       description:
-        "Großraumtaxi in Kaiserslautern für bis zu acht Personen und viel Gepäck. Ideal für Gruppen, Flughafentransfers und Feiern. Jetzt vorbestellen unter 0171 3553030.",
+        "Großraumtaxi in Kaiserslautern für bis zu acht Personen und viel Gepäck — für Gruppen, Flughafentransfers und Feiern. Tel. 0171 3553030.",
     },
     courier: {
-      title: "Kurierfahrten Kaiserslautern — Direktfahrt statt Paketdienst",
+      title: "Kurierfahrten Kaiserslautern",
       description:
         "Kurierfahrten in Kaiserslautern: Dokumente, Ersatzteile und dringende Sendungen direkt zum Empfänger, rund um die Uhr. Jetzt anrufen unter 0171 3553030.",
     },
@@ -968,9 +968,9 @@ const de = {
         "Taxi für Unternehmen in Kaiserslautern: Gästeabholung, Mitarbeiter- und Schichtfahrten, Flughafentransfers und Kurierfahrten mit festen Absprachen.",
     },
     app: {
-      title: "Taxi App Kaiserslautern — mit PIN 24075 bestellen",
+      title: "Taxi App Kaiserslautern — PIN 24075",
       description:
-        "Taxi in Kaiserslautern per App bestellen: Taxi.de App gratis laden, City Taxi Kaiserslautern mit PIN 24075 hinterlegen, per Klick bestellen und die Anfahrt live verfolgen.",
+        "Taxi per App bestellen: Taxi.de App gratis laden, City Taxi Kaiserslautern mit PIN 24075 hinterlegen, per Klick bestellen.",
     },
     imprint: {
       title: "Impressum",

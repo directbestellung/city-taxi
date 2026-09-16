@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -35,6 +35,58 @@ export default function HeaderNav({
 }) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
+  const panelRef = useRef<HTMLElement | null>(null);
+  const toggleRef = useRef<HTMLButtonElement | null>(null);
+
+  const close = useCallback(() => setOpen(false), []);
+
+  /**
+   * Dismiss the open menu the way a phone user expects: by starting to scroll,
+   * by tapping anywhere outside it, or with Escape — not only by finding the
+   * close button.
+   *
+   * Listeners are only attached while the menu is open, so there is no
+   * scroll handler running on a page nobody has opened the menu on.
+   */
+  useEffect(() => {
+    if (!open) return;
+
+    function onPointerDown(event: PointerEvent) {
+      const target = event.target as Node;
+      // A tap on the toggle is its own business; let it handle the state.
+      if (panelRef.current?.contains(target) || toggleRef.current?.contains(target)) {
+        return;
+      }
+      close();
+    }
+
+    function onKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") close();
+    }
+
+    /**
+     * Close when the user scrolls — but listen for wheel and touchmove, not
+     * "scroll". The scroll event also fires for momentum after a flick and for
+     * smooth scrolling still in flight, so using it closed the menu again a
+     * moment after someone deliberately opened it. wheel and touchmove only
+     * fire when a person is actually scrolling right now.
+     */
+    document.addEventListener("wheel", close, { passive: true });
+    document.addEventListener("touchmove", close, { passive: true });
+    document.addEventListener("pointerdown", onPointerDown);
+    document.addEventListener("keydown", onKeyDown);
+
+    return () => {
+      document.removeEventListener("wheel", close);
+      document.removeEventListener("touchmove", close);
+      document.removeEventListener("pointerdown", onPointerDown);
+      document.removeEventListener("keydown", onKeyDown);
+    };
+  }, [open, close]);
+
+  // No effect is needed for route changes: the panel's links close it on click,
+  // and every other control sits outside the panel, so the pointerdown handler
+  // above already catches those.
 
   /** Current page, derived from the URL, so the switcher keeps you on this page. */
   const segments = pathname.split("/").filter(Boolean);
@@ -87,6 +139,7 @@ export default function HeaderNav({
 
         <button
           type="button"
+          ref={toggleRef}
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-controls="mobile-nav"
@@ -102,6 +155,7 @@ export default function HeaderNav({
       {open ? (
         <nav
           id="mobile-nav"
+          ref={panelRef}
           aria-label={menuLabel}
           className="absolute inset-x-0 top-16 border-b border-border bg-bg px-4 py-3 shadow-lg lg:hidden"
         >

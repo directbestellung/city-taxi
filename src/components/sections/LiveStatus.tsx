@@ -7,6 +7,9 @@ import { useSyncExternalStore } from "react";
  * somewhere: a pulsing LIVE badge, the promise itself, and a clock ticking in
  * Kaiserslautern local time.
  *
+ * en-US, not en-GB: most of the English-speaking audience here is the American
+ * community around Ramstein, so the clock reads 1:22:13 AM rather than 01:22:13.
+ *
  * The clock is read through useSyncExternalStore rather than an effect. The
  * server snapshot is null, so the server renders no time at all and there is
  * nothing for hydration to mismatch — and the subscription updates from a
@@ -22,7 +25,7 @@ function subscribe(onChange: () => void) {
  * useSyncExternalStore does on the snapshot stays stable.
  */
 function readClock(locale: "de" | "en") {
-  return new Date().toLocaleTimeString(locale === "de" ? "de-DE" : "en-GB", {
+  return new Date().toLocaleTimeString(locale === "de" ? "de-DE" : "en-US", {
     timeZone: "Europe/Berlin",
     hour: "2-digit",
     minute: "2-digit",

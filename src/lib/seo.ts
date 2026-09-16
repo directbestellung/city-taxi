@@ -99,7 +99,7 @@ export function businessJsonLd(locale: Locale) {
       target: {
         "@type": "EntryPoint",
         urlTemplate: `${siteUrl}${pathFor(locale, "booking")}`,
-        inLanguage: locale === "de" ? "de-DE" : "en-GB",
+        inLanguage: locale === "de" ? "de-DE" : "en-US",
         actionPlatform: [
           "https://schema.org/DesktopWebPlatform",
           "https://schema.org/MobileWebPlatform",

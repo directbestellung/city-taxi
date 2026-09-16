@@ -25,7 +25,7 @@ export default function TariffTable({
     { label: copy.rows.meterStep, amount: tariff.meterStep },
   ];
 
-  const validFrom = new Intl.DateTimeFormat(locale === "de" ? "de-DE" : "en-GB", {
+  const validFrom = new Intl.DateTimeFormat(locale === "de" ? "de-DE" : "en-US", {
     day: "numeric",
     month: "long",
     year: "numeric",

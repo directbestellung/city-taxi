@@ -3,7 +3,7 @@ import type { LandingBlock, ServiceCopy } from "./types";
 import type { Dictionary } from "./de";
 
 const en: Dictionary = {
-  htmlLang: "en",
+  htmlLang: "en-US",
   localeName: "English",
   otherLocaleName: "Deutsch",
   switchLanguage: "Change language",
@@ -82,7 +82,7 @@ const en: Dictionary = {
     areaLead:
       "We drive across the whole city and the surrounding towns. Longer journeys on request at a fixed price.",
     areas: [
-      "City centre",
+      "Downtown",
       "Kaiserslautern West",
       "Betzenberg",
       "Vogelweh",
@@ -279,7 +279,7 @@ const en: Dictionary = {
       },
     ],
     creditsHeading: "Image credits",
-    creditsIntro: "The photographs used on this site are freely licensed. Author and licence:",
+    creditsIntro: "The photographs used on this site are freely licensed. Author and license:",
   },
 
   privacy: {
@@ -320,7 +320,7 @@ const en: Dictionary = {
       {
         heading: "Contact by phone, email, and WhatsApp",
         body: [
-          "If you call, write, or message us on WhatsApp, we process the details you provide in order to handle your enquiry and carry out your journey. The legal basis is Art. 6(1)(b) GDPR.",
+          "If you call, write, or message us on WhatsApp, we process the details you provide in order to handle your inquiry and carry out your journey. The legal basis is Art. 6(1)(b) GDPR.",
           "Please note: WhatsApp is a service of WhatsApp Ireland Limited. When you use WhatsApp, connection and usage data is processed by that provider, and transfer to third countries cannot be ruled out. If you would rather avoid this, please use the phone or email instead.",
         ],
       },
@@ -350,9 +350,9 @@ const en: Dictionary = {
     columns: { item: "Item", price: "Amount" },
     rows: {
       basePrice: "Base fare (minimum fare)",
-      firstThree: "For the first 3 kilometres, per kilometre",
-      dayRate: "Each further kilometre, weekdays 06:00 to 22:00",
-      nightRate: "Each further kilometre, weekdays 22:00 to 06:00 and on Sundays and public holidays",
+      firstThree: "For the first 3 kilometers, per kilometer",
+      dayRate: "Each further kilometer, weekdays 06:00 to 22:00",
+      nightRate: "Each further kilometer, weekdays 22:00 to 06:00 and on Sundays and public holidays",
       waiting: "Time rate per hour (waiting and traffic standstill)",
       meterStep: "Increment the meter advances in",
     },
@@ -391,11 +391,11 @@ const en: Dictionary = {
           },
           {
             q: "What does a short trip across town cost?",
-            a: "A journey of around 3 kilometres costs 10.40 euros: a 3.50 euro base fare plus three times 2.30 euros per kilometre. On top of that, only the traffic standstill or waiting time that actually occurs.",
+            a: "A journey of around 3 kilometers costs 10.40 euros: a 3.50 euro base fare plus three times 2.30 euros per kilometer. On top of that, only the traffic standstill or waiting time that actually occurs.",
           },
           {
             q: "Is it more expensive at night?",
-            a: "The base fare and the first three kilometres stay the same. From the fourth kilometre, nights, Sundays, and public holidays are charged at 2.20 euros instead of 2.10 euros per kilometre.",
+            a: "The base fare and the first three kilometers stay the same. From the fourth kilometer, nights, Sundays, and public holidays are charged at 2.20 euros instead of 2.10 euros per kilometer.",
           },
           {
             q: "Are there surcharges for luggage or pets?",
@@ -560,7 +560,7 @@ const en: Dictionary = {
             },
             {
               q: "How much luggage fits in the vehicle?",
-              a: "Just tell us how many passengers and suitcases are travelling. For larger loads or groups of up to eight people we send a large-capacity vehicle.",
+              a: "Just tell us how many passengers and suitcases are traveling. For larger loads or groups of up to eight people we send a large-capacity vehicle.",
             },
           ],
         },
@@ -659,7 +659,7 @@ const en: Dictionary = {
           type: "text",
           heading: "The ride you should not have to think about",
           paragraphs: [
-            "Most journeys in Kaiserslautern are short: a few kilometres into town, to the doctor, to work, or back home. Which means only one thing really matters — that the car is there when you need it and you arrive on time.",
+            "Most journeys in Kaiserslautern are short: a few kilometers into town, to the doctor, to work, or back home. Which means only one thing really matters — that the car is there when you need it and you arrive on time.",
             "We drive across the whole city, including the outlying districts beyond the mandatory service area such as Hohenecken, Siegelbach, Erfenbach, Morlautern, and Dansenberg. Call as you need it, or book ahead for a fixed appointment.",
           ],
         },
@@ -669,7 +669,7 @@ const en: Dictionary = {
           intro: "Destinations that come up every day:",
           items: [
             "Main station and bus station, with help to the platform",
-            "City centre, Fackelrondell, and Stiftsplatz",
+            "Downtown, Fackelrondell, and Stiftsplatz",
             "Westpfalz-Klinikum, clinics, and specialist practices",
             "RPTU University and the college campuses",
             "Fritz-Walter-Stadion on match days",
@@ -698,7 +698,7 @@ const en: Dictionary = {
             },
             {
               q: "Do you drive at night and on Sundays?",
-              a: "Yes, around the clock, seven days a week. From the fourth kilometre, nights, Sundays, and public holidays carry a slightly higher rate per kilometre.",
+              a: "Yes, around the clock, seven days a week. From the fourth kilometer, nights, Sundays, and public holidays carry a slightly higher rate per kilometer.",
             },
             {
               q: "Will you take luggage or shopping?",
@@ -719,7 +719,7 @@ const en: Dictionary = {
           heading: "Everyone in one car",
           paragraphs: [
             "As soon as there are five or more of you, an ordinary taxi gets tight. A large-capacity taxi solves it: everyone travels together, the luggage comes along, and one vehicle goes instead of two that lose each other on the way.",
-            "When you book, just tell us how many people are travelling and how much luggage there is, and we will send the right vehicle.",
+            "When you book, just tell us how many people are traveling and how much luggage there is, and we will send the right vehicle.",
           ],
         },
         {
@@ -789,7 +789,7 @@ const en: Dictionary = {
             "Contracts, paperwork, and signed documents",
             "Spare parts and small components for a workshop or business",
             "Keys and forgotten belongings",
-            "Goods and samples up to boot size",
+            "Goods and samples up to trunk size",
             "Deliveries between company sites around Kaiserslautern",
             "Urgent runs to business partners in the region",
           ],
@@ -907,17 +907,17 @@ const en: Dictionary = {
     home: {
       title: "Order a taxi online in Kaiserslautern — City Taxi 24h",
       description:
-        "Order a taxi in Kaiserslautern online — with real-time personal confirmation from a driver or our dispatch, around the clock. City rides, airport transfers, large-capacity taxi. Or call 0171 3553030.",
+        "Order a taxi in Kaiserslautern online — with real-time personal confirmation, around the clock. Or call 0171 3553030.",
     },
     services: {
-      title: "Services — city rides, airport transfers & more",
+      title: "Services — city rides & airport transfers",
       description:
-        "Our journeys in Kaiserslautern: city rides, airport transfers to Frankfurt and Hahn, large-capacity taxi, courier runs, and medical journeys. Charged at the official taxi tariff.",
+        "City rides, airport transfers, large-capacity taxi, courier runs, and medical journeys in Kaiserslautern, at the official tariff.",
     },
     booking: {
       title: "Order a taxi online in Kaiserslautern",
       description:
-        "Order a taxi online in Kaiserslautern: enter pick-up point, destination, and time — confirmation comes in real time from a driver or our dispatch. Around the clock, including right now.",
+        "Order a taxi online in Kaiserslautern: enter pick-up, destination, and time. Real-time confirmation, around the clock.",
     },
     contact: {
       title: "Contact — taxi service Kaiserslautern",
@@ -925,37 +925,37 @@ const en: Dictionary = {
         "City Taxi Kaiserslautern, Pariser Str. 51, 67655 Kaiserslautern. Reachable by phone, WhatsApp, or online — 24 hours a day.",
     },
     medical: {
-      title: "Medical transport Kaiserslautern — all health insurers",
+      title: "Medical transport in Kaiserslautern",
       description:
-        "Seated medical transport in Kaiserslautern: dialysis, chemotherapy, doctor appointments, and hospital journeys. We drive for all health insurers. Call 0171 3553030.",
+        "Seated medical transport in Kaiserslautern: dialysis, chemotherapy, doctor and hospital trips. We drive for all health insurers.",
     },
     airport: {
-      title: "Airport transfer Kaiserslautern — Frankfurt, Hahn & more",
+      title: "Airport transfers from Kaiserslautern",
       description:
         "Airport transfers from Kaiserslautern to Frankfurt, Hahn, Saarbrücken, and Luxembourg. Flat rate on request, around the clock. Ask for your fixed price today.",
     },
     tariff: {
       title: "Taxi fares Kaiserslautern — the official tariff",
       description:
-        "What does a taxi cost in Kaiserslautern? A 3.50 € base fare, from 2.10 € per kilometre. The complete official taxi tariff with every surcharge, clearly explained.",
+        "What does a taxi cost in Kaiserslautern? A 3.50 € base fare, from 2.10 € per kilometer — the full official tariff, clearly explained.",
     },
     airbase: {
-      title: "Taxi Ramstein Air Base — KMC, Landstuhl & Vogelweh",
+      title: "Taxi to Ramstein Air Base & the KMC",
       description:
         "Taxi between Kaiserslautern and Ramstein Air Base, Landstuhl Regional Medical Center, Vogelweh, and the KMC. Around the clock, flat rate on request.",
     },
     cityrides: {
-      title: "Taxi Kaiserslautern city rides — fast, around the clock",
+      title: "City rides — taxi in Kaiserslautern",
       description:
-        "Taxi for short trips in Kaiserslautern: main station, city centre, hospital, university. Charged at the official taxi tariff, day and night. Call 0171 3553030.",
+        "Taxi for short trips in Kaiserslautern: main station, downtown, hospital, university. Charged at the official taxi tariff, day and night. Call 0171 3553030.",
     },
     largetaxi: {
-      title: "Large taxi Kaiserslautern — up to 8 passengers",
+      title: "Large-capacity taxi Kaiserslautern",
       description:
-        "Large-capacity taxi in Kaiserslautern for up to eight passengers and plenty of luggage. Ideal for groups, airport transfers, and celebrations. Book on 0171 3553030.",
+        "Large-capacity taxi in Kaiserslautern for up to eight passengers and luggage — groups, airport transfers, celebrations.",
     },
     courier: {
-      title: "Courier service Kaiserslautern — direct, not a parcel depot",
+      title: "Courier service in Kaiserslautern",
       description:
         "Courier runs in Kaiserslautern: documents, spare parts, and urgent deliveries taken straight to the recipient, around the clock. Call 0171 3553030.",
     },
@@ -965,9 +965,9 @@ const en: Dictionary = {
         "Taxi for companies in Kaiserslautern: guest collection, staff and shift journeys, airport transfers, and courier runs under a standing arrangement.",
     },
     app: {
-      title: "Taxi app Kaiserslautern — order with PIN 24075",
+      title: "Taxi app Kaiserslautern — PIN 24075",
       description:
-        "Order a taxi in Kaiserslautern from your phone: download the free Taxi.de app, save City Taxi Kaiserslautern with PIN 24075, order with a tap and follow your car live.",
+        "Order from your phone: download the free Taxi.de app, save City Taxi Kaiserslautern with PIN 24075, and order with a tap.",
     },
     imprint: {
       title: "Imprint",

@@ -191,6 +191,21 @@ of your own cars and drivers** — a real vehicle outside a recognisable place
 beats any stock image for trust, and needs no credit line. Drop the file in,
 update the entry, and delete the `credit` block.
 
+## English is American English
+
+Most of the English-speaking audience here is the US community around Ramstein,
+so `en` is en-US throughout, not just in spelling:
+
+- `<html lang="en-US">`, while `hreflang` stays plain `en` so it still matches
+  every English speaker
+- the live clock reads `2:48:59 AM`, not `02:48:59`
+- dates read `September 1, 2022`, not `1 September 2022`
+- US spellings (kilometer, center, license, traveling) and idiom — a car's boot
+  is a trunk
+
+Those conventions come from the locale codes in `LiveStatus`, `TariffTable` and
+`formatEuro`; changing the dialect means changing those, not just the copy.
+
 ## SEO
 
 - Unique title and meta description per page, per language
