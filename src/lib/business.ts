@@ -32,6 +32,18 @@ export const business = {
    * pieces, so the complete string never appears in the served HTML for a
    * regex-over-the-page harvester to find. See ObfuscatedEmail.
    */
+  /**
+   * VAT identification number, shown in the Impressum under § 27a UStG.
+   *
+   * Leave null until it is known: both language versions then render a visible
+   * placeholder, so an incomplete Impressum cannot ship unnoticed. Set it here
+   * and both are correct — no need to edit the dictionaries.
+   *
+   * If the business is a Kleinunternehmer with no VAT ID, put the § 19 UStG
+   * note here instead of a number.
+   */
+  vatId: null as string | null,
+
   emailUser: "info",
   emailDomain: "citytaxi-kl.de",
 

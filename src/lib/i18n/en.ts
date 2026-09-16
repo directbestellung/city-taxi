@@ -253,7 +253,7 @@ const en: Dictionary = {
         heading: "VAT",
         body: [
           "VAT identification number pursuant to § 27 a of the German VAT Act:",
-          "[VAT ID, or a note on the small-business rule under § 19 UStG]",
+          business.vatId ?? "[VAT ID, or a note on the small-business rule under § 19 UStG]",
         ],
       },
       {

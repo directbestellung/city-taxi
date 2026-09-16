@@ -256,7 +256,7 @@ const de = {
         heading: "Umsatzsteuer",
         body: [
           "Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz:",
-          "[USt-IdNr. oder Hinweis auf Kleinunternehmerregelung nach § 19 UStG]",
+          business.vatId ?? "[USt-IdNr. oder Hinweis auf Kleinunternehmerregelung nach § 19 UStG]",
         ],
       },
       {

@@ -41,7 +41,7 @@ NEXT_PUBLIC_SITE_URL=https://citytaxi-kl.de
 
 | # | What | Where |
 | --- | --- | --- |
-| 1 | **One Impressum field left.** Owner and supervising authority are filled in; the **VAT ID** is still a visible `[placeholder]` — replace it with the number, or with a note on the small-business rule (§ 19 UStG) if that applies. An incomplete Impressum is a real legal risk in Germany (§ 5 DDG). | `src/lib/i18n/de.ts`, `en.ts` |
+| 1 | **One Impressum field left: the VAT ID.** Set `vatId` in `business.ts` and both languages are correct — put the § 19 UStG small-business note there instead if there is no number. While it is `null` a visible `[placeholder]` shows on both imprint pages, so an incomplete Impressum cannot ship unnoticed. This is a real legal requirement in Germany (§ 5 DDG). | `src/lib/business.ts` |
 | 2 | **Have the privacy policy reviewed.** Written for this site as built (server logs, taxi.de iframe, WhatsApp) — but it is not legal advice. | `src/lib/i18n/de.ts`, `en.ts` |
 | 3 | **Re-check the taxi tariff.** The figures follow the Taxentarifordnung in force since 1 Sept 2022. These are legally binding prices — verify against the current ordinance and update on every amendment. | `src/lib/tariff.ts` |
 | 4 | **Confirm 24/7 availability** — assumed, and stated on every page and in the structured data. | `src/lib/business.ts` |
