@@ -260,7 +260,9 @@ const en: Dictionary = {
         heading: "Professional information",
         body: [
           "Professional title: taxi operator (awarded in the Federal Republic of Germany)",
-          "Competent supervisory and licensing authority: [authority, e.g. Stadtverwaltung Kaiserslautern, with address]",
+          "Competent supervisory and licensing authority:",
+            "Stadtverwaltung Kaiserslautern, Referat Recht und Ordnung, Abteilung KFZ-Wesen, 67653 Kaiserslautern, Germany",
+            "www.kaiserslautern.de",
           "The German Passenger Transport Act (PBefG) and its associated regulations apply; they can be consulted at www.gesetze-im-internet.de.",
         ],
       },

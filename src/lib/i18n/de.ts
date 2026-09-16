@@ -263,7 +263,9 @@ const de = {
         heading: "Berufsrechtliche Angaben",
         body: [
           "Berufsbezeichnung: Taxiunternehmen (verliehen in der Bundesrepublik Deutschland)",
-          "Zuständige Aufsichts- und Genehmigungsbehörde: [zuständige Behörde, z. B. Stadtverwaltung Kaiserslautern, Anschrift]",
+          "Zuständige Aufsichts- und Genehmigungsbehörde:",
+            "Stadtverwaltung Kaiserslautern, Referat Recht und Ordnung, Abteilung KFZ-Wesen, 67653 Kaiserslautern",
+            "www.kaiserslautern.de",
           "Es gelten das Personenbeförderungsgesetz (PBefG) und die dazu ergangenen Verordnungen, einsehbar unter www.gesetze-im-internet.de.",
         ],
       },
