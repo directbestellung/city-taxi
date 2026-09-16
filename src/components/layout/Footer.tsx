@@ -7,95 +7,107 @@ import {
   pathFor,
   seoPages,
   type Locale,
+  type PageKey,
 } from "@/lib/i18n/routes";
 import { MailIcon, PhoneIcon, PinIcon } from "@/components/Icons";
 import Wordmark from "./Wordmark";
 
+/**
+ * Compact footer.
+ *
+ * Links run inline rather than in stacked columns — the same crawlable anchors
+ * in roughly a third of the height.
+ *
+ * The service-area line is real content, not a keyword list: an unlinked block
+ * of search terms in a footer is the pattern search engines treat as stuffing.
+ * The SEO value here is in the descriptive anchor text of the offer links and
+ * in the districts actually being places we drive to.
+ */
 export default function Footer({ locale }: { locale: Locale }) {
   const t = getDictionary(locale);
 
+  const row = (label: string, pages: PageKey[]) => (
+    <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+      <span className="shrink-0 text-xs font-semibold text-night-fg">{label}</span>
+      <ul className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+        {pages.map((page, index) => (
+          <li key={page} className="flex items-baseline gap-2">
+            {index > 0 ? (
+              <span aria-hidden="true" className="text-night-border">
+                &middot;
+              </span>
+            ) : null}
+            <Link
+              href={pathFor(locale, page)}
+              className="text-xs text-night-muted transition hover:text-accent"
+            >
+              {t.nav[page]}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+
   return (
     <footer className="border-t border-night-border bg-night text-night-fg">
-      <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-        <div className="grid gap-10 md:grid-cols-4">
-          <div className="md:col-span-2">
+      <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
+        <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
+          <div className="min-w-0">
             <Wordmark tone="night" size="footer" />
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-night-muted">
+            <p className="mt-3 max-w-sm text-xs leading-relaxed text-night-muted">
               {t.footer.tagline}
             </p>
           </div>
 
-          <div>
-            <h2 className="text-sm font-semibold">{t.footer.navTitle}</h2>
-            <ul className="mt-4 space-y-2.5 text-sm text-night-muted">
-              {navPages.map((page) => (
-                <li key={page}>
-                  <Link href={pathFor(locale, page)} className="transition hover:text-accent">
-                    {t.nav[page]}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <h2 className="mt-7 text-sm font-semibold">{t.footer.servicesTitle}</h2>
-            <ul className="mt-4 space-y-2.5 text-sm text-night-muted">
-              {seoPages.map((page) => (
-                <li key={page}>
-                  <Link href={pathFor(locale, page)} className="transition hover:text-accent">
-                    {t.nav[page]}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-
-            <h2 className="mt-7 text-sm font-semibold">{t.footer.legalTitle}</h2>
-            <ul className="mt-4 space-y-2.5 text-sm text-night-muted">
-              {footerLegalPages.map((page) => (
-                <li key={page}>
-                  <Link href={pathFor(locale, page)} className="transition hover:text-accent">
-                    {t.nav[page]}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h2 className="text-sm font-semibold">{t.footer.contactTitle}</h2>
-            <ul className="mt-4 space-y-3 text-sm">
-              <li>
-                <a href={business.phoneHref} className="flex items-center gap-2.5 transition hover:text-accent">
-                  <PhoneIcon className="size-4 shrink-0 text-accent" />
-                  {business.phoneDisplay}
-                </a>
-              </li>
-              <li>
-                <a href={`mailto:${business.email}`} className="flex items-center gap-2.5 transition hover:text-accent">
-                  <MailIcon className="size-4 shrink-0 text-accent" />
-                  {business.email}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={mapsDirectionsUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="flex gap-2.5 text-night-muted transition hover:text-accent"
-                >
-                  <PinIcon className="mt-0.5 size-4 shrink-0 text-accent" />
-                  <span>
-                    {business.street}
-                    <br />
-                    {business.postalCode} {business.city}
-                  </span>
-                </a>
-              </li>
-            </ul>
-            <p className="mt-4 text-xs text-night-muted">{t.common.hours}</p>
-          </div>
+          <ul className="shrink-0 space-y-1.5 text-sm sm:text-right">
+            <li>
+              <a
+                href={business.phoneHref}
+                className="inline-flex items-center gap-2 font-semibold transition hover:text-accent sm:flex-row-reverse"
+              >
+                <PhoneIcon className="size-4 text-accent" />
+                {business.phoneDisplay}
+              </a>
+            </li>
+            <li>
+              <a
+                href={`mailto:${business.email}`}
+                className="inline-flex items-center gap-2 text-xs text-night-muted transition hover:text-accent sm:flex-row-reverse"
+              >
+                <MailIcon className="size-4 text-accent" />
+                {business.email}
+              </a>
+            </li>
+            <li>
+              <a
+                href={mapsDirectionsUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 text-xs text-night-muted transition hover:text-accent sm:flex-row-reverse"
+              >
+                <PinIcon className="size-4 shrink-0 text-accent" />
+                {business.street}, {business.postalCode} {business.city}
+              </a>
+            </li>
+            <li className="text-xs text-night-muted">{t.common.hours}</li>
+          </ul>
         </div>
 
-        <div className="mt-12 border-t border-night-border pt-6 text-xs text-night-muted">
+        <nav
+          aria-label={t.footer.navTitle}
+          className="mt-8 space-y-2 border-t border-night-border pt-6"
+        >
+          {row(t.footer.navTitle, navPages)}
+          {row(t.footer.servicesTitle, seoPages)}
+          {row(t.footer.legalTitle, footerLegalPages)}
+        </nav>
+
+        <div className="mt-6 space-y-2 border-t border-night-border pt-5 text-xs text-night-muted">
+          <p>
+            <span className="font-medium text-night-fg">{t.footer.areaLabel}:</span>{" "}
+            {t.home.areas.join(" · ")}
+          </p>
           <p>
             &copy; {new Date().getFullYear()} {business.name}. {t.footer.rights}
           </p>

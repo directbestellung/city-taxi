@@ -926,6 +926,7 @@ const en: Dictionary = {
   footer: {
     tagline:
       "Your taxi company in Kaiserslautern. City rides, airport transfers, and courier runs — around the clock.",
+    areaLabel: "Service area",
     navTitle: "Pages",
     contactTitle: "Contact",
     servicesTitle: "What we offer",

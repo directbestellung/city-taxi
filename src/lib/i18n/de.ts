@@ -930,6 +930,7 @@ const de = {
   footer: {
     tagline:
       "Ihr Taxiunternehmen in Kaiserslautern. Stadtfahrten, Flughafentransfer und Kurierfahrten — rund um die Uhr.",
+    areaLabel: "Einsatzgebiet",
     navTitle: "Seiten",
     contactTitle: "Kontakt",
     servicesTitle: "Angebote",
