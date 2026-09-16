@@ -183,6 +183,23 @@ ask about cookies is a contradiction.
 Visitors can request deletion of their data by email; that route is set out on
 the privacy page in both languages.
 
+## Welcome splash
+
+`src/components/layout/WelcomeSplash.tsx` shows the logo large on blurred dark
+glass for about a second on a visitor's first page of a session.
+`WELCOME_MS` is the whole knob — set it to `0` to switch it off.
+
+It is kept deliberately unobtrusive: once per session rather than per page, a
+tap clears it immediately, it does not appear under `prefers-reduced-motion`,
+and the page renders underneath it throughout, so nothing is withheld from
+crawlers and no content is delayed.
+
+The hold starts when the logo has actually **loaded**, not when the component
+mounts. A `priority` image is often decoded before React attaches its handlers,
+so `onLoad` alone never fires and the logo sits at opacity 0 — the splash then
+shows as a blank dark pane, which reads as a broken page. The image ref checks
+`complete` to cover that.
+
 ## The logo
 
 `public/logo/` holds two variants of the mark and `src/lib/logo.ts` maps each to

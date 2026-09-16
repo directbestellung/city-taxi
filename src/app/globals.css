@@ -86,3 +86,9 @@ section[id] {
 body:has([data-cookie-banner]) [data-whatsapp-fab] {
   bottom: 6.5rem;
 }
+
+/* Set by the inline script before first paint when this session has already
+   seen the welcome overlay, so it never flashes on subsequent page loads. */
+html[data-welcome="seen"] [data-welcome-splash] {
+  display: none;
+}

@@ -4,6 +4,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import CookieBanner from "@/components/layout/CookieBanner";
+import WelcomeSplash from "@/components/layout/WelcomeSplash";
 import WhatsAppFab from "@/components/layout/WhatsAppFab";
 import { business, siteUrl } from "@/lib/business";
 import { getDictionary } from "@/lib/i18n";
@@ -35,7 +36,22 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
       lang={t.htmlLang}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        {/*
+          Runs before first paint: if this session has already been greeted, the
+          splash is hidden by CSS straight away rather than rendering and then
+          being removed, which would flash on every page load.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{if(sessionStorage.getItem('citytaxi-welcomed')==='1')" +
+              "document.documentElement.dataset.welcome='seen'}catch(e){}",
+          }}
+        />
+      </head>
       <body className="flex min-h-full flex-col font-sans">
+        <WelcomeSplash />
         <a
           href="#main"
           className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-accent-fg"
