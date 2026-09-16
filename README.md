@@ -157,6 +157,23 @@ Navigation, sitemap, and hreflang pick it up automatically.
 
 ---
 
+## The email address
+
+`ObfuscatedEmail` renders it in pieces — local part, `@`, domain as separate
+elements — and attaches the `mailto:` on the client through a ref. The served
+HTML therefore contains neither the address as a contiguous string nor a
+`mailto:` anywhere. Legal copy carries an `{email}` token that `LegalSections`
+swaps for the same element, so the address is never baked into those strings.
+
+For a person nothing changes: the text reads as the address, selects and copies
+normally, and hydrates into a real mailto link. Without JavaScript it degrades
+to readable text rather than vanishing — which matters, since the Impressum has
+to state a working address.
+
+**It defeats cheap harvesters, not a scraper driving a real browser**, which
+sees the assembled address like any visitor. If the address starts attracting
+spam, the answer is a contact form or a burnable alias, not more obfuscation.
+
 ## Cookie banner and tracking
 
 `src/lib/consent.ts` holds the switch. It is **off**, because the site loads no

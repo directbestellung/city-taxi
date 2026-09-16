@@ -25,7 +25,13 @@ export const business = {
   /** wa.me expects the international number without + or spaces. */
   whatsappNumber: "4915565554111",
 
-  email: "toptaxikl@gmail.com",
+  /**
+   * Split on purpose. The address is assembled at runtime and rendered in
+   * pieces, so the complete string never appears in the served HTML for a
+   * regex-over-the-page harvester to find. See ObfuscatedEmail.
+   */
+  emailUser: "info",
+  emailDomain: "citytaxi-kl.de",
 
   /** Verified against OpenStreetMap for Pariser Str. 51. Used for local SEO. */
   geo: { latitude: 49.4435759, longitude: 7.7595036 },
@@ -53,6 +59,14 @@ export const business = {
    */
   contentUpdatedAt: "2026-09-14",
 } as const;
+
+/**
+ * The address, joined at runtime. `.join()` rather than a template literal so a
+ * minifier does not fold it back into one literal in the bundle.
+ */
+export function emailAddress(): string {
+  return [business.emailUser, business.emailDomain].join("@");
+}
 
 export const mapsDirectionsUrl =
   "https://www.google.com/maps/dir/?api=1&destination=" +

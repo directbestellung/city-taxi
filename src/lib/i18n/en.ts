@@ -247,7 +247,7 @@ const en: Dictionary = {
       },
       {
         heading: "Contact",
-        body: [`Phone: ${business.phoneDisplay}`, `Email: ${business.email}`],
+        body: [`Phone: ${business.phoneDisplay}`, "Email: {email}"],
       },
       {
         heading: "VAT",
@@ -294,7 +294,7 @@ const en: Dictionary = {
           "[Owner: first and last name]",
           `${business.street}, ${business.postalCode} ${business.city}`,
           `Phone: ${business.phoneDisplay}`,
-          `Email: ${business.email}`,
+          "Email: {email}",
         ],
       },
       {
@@ -333,7 +333,7 @@ const en: Dictionary = {
       {
         heading: "Deleting your data",
         body: [
-          "You can ask us at any time to delete the personal data we hold about you. An informal email to toptaxikl@gmail.com with the subject \"Data deletion\" is enough; please include your name and the phone number or email address you booked with, so we can find the right records.",
+          "You can ask us at any time to delete the personal data we hold about you. An informal email to {email} with the subject \"Data deletion\" is enough; please include your name and the phone number or email address you booked with, so we can find the right records.",
           "We will confirm the deletion. If a statutory retention period — a tax one, for example — prevents us deleting something immediately, we will tell you which data is affected and when it will go. Processing is restricted in the meantime.",
           "The same applies to access, correction, and data portability: an email to the same address is all it takes.",
         ],

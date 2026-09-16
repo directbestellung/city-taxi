@@ -10,6 +10,7 @@ import {
   type PageKey,
 } from "@/lib/i18n/routes";
 import { MailIcon, PhoneIcon, PinIcon } from "@/components/Icons";
+import ObfuscatedEmail from "@/components/layout/ObfuscatedEmail";
 import Wordmark from "./Wordmark";
 
 /**
@@ -71,13 +72,10 @@ export default function Footer({ locale }: { locale: Locale }) {
               </a>
             </li>
             <li>
-              <a
-                href={`mailto:${business.email}`}
-                className="inline-flex items-center gap-2 text-xs text-night-muted transition hover:text-accent sm:flex-row-reverse"
-              >
+              <span className="inline-flex items-center gap-2 text-xs text-night-muted transition hover:text-accent sm:flex-row-reverse">
                 <MailIcon className="size-4 text-accent" />
-                {business.email}
-              </a>
+                <ObfuscatedEmail />
+              </span>
             </li>
             <li>
               <a

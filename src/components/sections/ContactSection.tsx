@@ -4,6 +4,7 @@ import { getDictionary } from "@/lib/i18n";
 import { pathFor, type Locale } from "@/lib/i18n/routes";
 import SectionHeading from "./SectionHeading";
 import { MailIcon, PhoneIcon, PinIcon, WhatsAppIcon } from "@/components/Icons";
+import ObfuscatedEmail from "@/components/layout/ObfuscatedEmail";
 
 /** Compact contact block so the home page answers "how do I reach them?" too. */
 export default function ContactSection({ locale }: { locale: Locale }) {
@@ -60,13 +61,10 @@ export default function ContactSection({ locale }: { locale: Locale }) {
           <div>
             <dt className="font-medium text-muted">{t.common.emailLabel}</dt>
             <dd className="mt-1">
-              <a
-                href={`mailto:${business.email}`}
-                className="inline-flex items-center gap-2 hover:text-accent-text"
-              >
+              <span className="inline-flex items-center gap-2 hover:text-accent-text">
                 <MailIcon className="size-4" />
-                {business.email}
-              </a>
+                <ObfuscatedEmail />
+              </span>
             </dd>
           </div>
         </dl>

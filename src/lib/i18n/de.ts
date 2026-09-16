@@ -249,7 +249,7 @@ const de = {
         heading: "Kontakt",
         body: [
           `Telefon: ${business.phoneDisplay}`,
-          `E-Mail: ${business.email}`,
+          "E-Mail: {email}",
         ],
       },
       {
@@ -297,7 +297,7 @@ const de = {
           "[Inhaberin / Inhaber: Vor- und Nachname]",
           `${business.street}, ${business.postalCode} ${business.city}`,
           `Telefon: ${business.phoneDisplay}`,
-          `E-Mail: ${business.email}`,
+          "E-Mail: {email}",
         ],
       },
       {
@@ -336,7 +336,7 @@ const de = {
       {
         heading: "Löschung Ihrer Daten",
         body: [
-          "Sie können jederzeit verlangen, dass wir die zu Ihrer Person gespeicherten Daten löschen. Eine formlose E-Mail an toptaxikl@gmail.com mit dem Betreff „Datenlöschung“ genügt; nennen Sie darin bitte Ihren Namen und die Telefonnummer oder E-Mail-Adresse, unter der Sie bei uns bestellt haben, damit wir die Daten zuordnen können.",
+          "Sie können jederzeit verlangen, dass wir die zu Ihrer Person gespeicherten Daten löschen. Eine formlose E-Mail an {email} mit dem Betreff „Datenlöschung“ genügt; nennen Sie darin bitte Ihren Namen und die Telefonnummer oder E-Mail-Adresse, unter der Sie bei uns bestellt haben, damit wir die Daten zuordnen können.",
           "Wir bestätigen Ihnen die Löschung. Sollten gesetzliche Aufbewahrungsfristen — etwa steuerliche — einer sofortigen Löschung entgegenstehen, sagen wir Ihnen, welche Daten davon betroffen sind und wann sie gelöscht werden. Die Verarbeitung wird in diesem Fall eingeschränkt.",
           "Dasselbe gilt für Auskunft, Berichtigung und Datenübertragbarkeit: eine E-Mail an dieselbe Adresse reicht aus.",
         ],

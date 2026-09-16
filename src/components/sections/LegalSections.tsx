@@ -1,4 +1,22 @@
+import { Fragment } from "react";
+import ObfuscatedEmail from "@/components/layout/ObfuscatedEmail";
+
 type Section = { heading: string; body: readonly string[] };
+
+/**
+ * Legal copy carries an {email} token rather than the address itself, so the
+ * address is never baked into these strings — and therefore never appears in
+ * the served HTML as one contiguous, harvestable string.
+ */
+function withEmail(text: string) {
+  const parts = text.split("{email}");
+  return parts.map((part, i) => (
+    <Fragment key={i}>
+      {part}
+      {i < parts.length - 1 ? <ObfuscatedEmail /> : null}
+    </Fragment>
+  ));
+}
 
 /** Shared renderer for the Impressum and the privacy policy. */
 export default function LegalSections({ sections }: { sections: readonly Section[] }) {
@@ -11,7 +29,7 @@ export default function LegalSections({ sections }: { sections: readonly Section
             <div className="mt-3 space-y-2.5">
               {section.body.map((line) => (
                 <p key={line} className="text-sm leading-relaxed text-muted">
-                  {line}
+                  {withEmail(line)}
                 </p>
               ))}
             </div>

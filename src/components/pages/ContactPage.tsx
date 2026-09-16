@@ -1,6 +1,7 @@
 import Link from "next/link";
 import PageHeader from "@/components/sections/PageHeader";
 import { MailIcon, PhoneIcon, PinIcon, WhatsAppIcon } from "@/components/Icons";
+import ObfuscatedEmail from "@/components/layout/ObfuscatedEmail";
 import { business, mapsDirectionsUrl, whatsappUrl } from "@/lib/business";
 import type { Dictionary } from "@/lib/i18n";
 import { pathFor, type Locale } from "@/lib/i18n/routes";
@@ -96,13 +97,10 @@ export default function ContactPage({ locale, t }: { locale: Locale; t: Dictiona
             <div>
               <dt className="font-medium text-muted">{t.common.emailLabel}</dt>
               <dd className="mt-1">
-                <a
-                  href={`mailto:${business.email}`}
-                  className="inline-flex items-center gap-2 underline underline-offset-2 hover:text-accent-text"
-                >
+                <span className="inline-flex items-center gap-2 underline underline-offset-2 hover:text-accent-text">
                   <MailIcon className="size-4" />
-                  {business.email}
-                </a>
+                  <ObfuscatedEmail />
+                </span>
               </dd>
             </div>
           </dl>
