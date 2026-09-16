@@ -44,7 +44,7 @@ const de = {
     menu: "Menü",
     skipToContent: "Zum Inhalt springen",
     backHome: "Zurück zur Startseite",
-    ratingLine: `${business.rating.value} Sterne bei ${business.rating.count} Google-Bewertungen`,
+    ratingLine: `${business.rating.value} Sterne bei Google`,
   },
 
   home: {
@@ -228,6 +228,9 @@ const de = {
     whatsappBody: "Schreiben Sie uns Abholort und Uhrzeit, wir bestätigen kurz.",
     onlineTitle: "Online buchen",
     onlineBody: "Planen Sie eine Fahrt für später bequem über das Formular.",
+    reviewCta: "Bei Google bewerten",
+    reviewTitle: "Zufrieden gefahren?",
+    reviewBody: "Eine kurze Bewertung bei Google hilft anderen Fahrgästen, uns zu finden — und uns, besser zu werden.",
     addressTitle: "Anschrift",
   },
 

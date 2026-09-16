@@ -50,9 +50,25 @@ export const business = {
   /** Verified against OpenStreetMap for Pariser Str. 51. Used for local SEO. */
   geo: { latitude: 49.4435759, longitude: 7.7595036 },
 
-  /** Shown on the Google Business Profile at the time of writing. */
+  /**
+   * Shown on the Google Business Profile at the time of writing. `count` is
+   * kept but deliberately not used in the copy yet — "from 7 reviews" reads as
+   * a small number. Put it back in `ratingLine` once there are enough for it to
+   * work in your favour.
+   */
   rating: { value: "5,0", valueEn: "5.0", count: 7 },
   googleProfileUrl: "https://share.google/36BqKCrpDoMk3ehDW",
+
+  /**
+   * Where the "review us" button goes. This currently points at the profile,
+   * where a visitor can leave a review in a couple of taps.
+   *
+   * Better: the direct write-a-review link, which opens the review box
+   * straight away. Get it from your Google Business Profile — Ask for reviews,
+   * or "Get more reviews" — it looks like https://g.page/r/XXXXXXXX/review.
+   * Paste it here and the button uses it; nothing else changes.
+   */
+  googleReviewUrl: "https://share.google/36BqKCrpDoMk3ehDW",
 
   /**
    * Partner id at taxi.de. Used both by the booking widget and as the PIN

@@ -3,7 +3,7 @@ import { getDictionary } from "@/lib/i18n";
 import type { Locale } from "@/lib/i18n/routes";
 import BookingWidget, { widgetSurface } from "./BookingWidget";
 import LiveStatus from "./LiveStatus";
-import { CheckIcon, PhoneIcon, WhatsAppIcon } from "@/components/Icons";
+import { CheckIcon, StarIcon, PhoneIcon, WhatsAppIcon } from "@/components/Icons";
 
 /**
  * Ordering online is the primary action, so the booking form takes the hero.
@@ -104,12 +104,19 @@ export default function Hero({ locale }: { locale: Locale }) {
             ))}
           </ul>
 
-          <p className="mt-6 text-sm text-night-muted">
-            <span aria-hidden="true" className="text-accent">
-              {"★★★★★"}
-            </span>{" "}
+          <a
+            href={business.googleProfileUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="mt-6 inline-flex items-center gap-2 text-sm text-night-muted transition hover:text-night-fg"
+          >
+            <span aria-hidden="true" className="flex gap-0.5 text-accent">
+              {[0, 1, 2, 3, 4].map((i) => (
+                <StarIcon key={i} className="size-4" />
+              ))}
+            </span>
             {t.common.ratingLine}
-          </p>
+          </a>
         </div>
       </div>
     </section>

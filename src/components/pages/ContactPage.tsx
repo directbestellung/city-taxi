@@ -1,6 +1,6 @@
 import Link from "next/link";
 import PageHeader from "@/components/sections/PageHeader";
-import { MailIcon, PhoneIcon, PinIcon, WhatsAppIcon } from "@/components/Icons";
+import { MailIcon, PhoneIcon, PinIcon, StarIcon, WhatsAppIcon } from "@/components/Icons";
 import ObfuscatedEmail from "@/components/layout/ObfuscatedEmail";
 import { business, mapsDirectionsUrl, whatsappUrl } from "@/lib/business";
 import type { Dictionary } from "@/lib/i18n";
@@ -104,6 +104,34 @@ export default function ContactPage({ locale, t }: { locale: Locale; t: Dictiona
               </dd>
             </div>
           </dl>
+        </div>
+
+        {/*
+          Review ask. Deliberately a plain, unconditional link: Google forbids
+          steering — you may not screen for a happy answer first and send only
+          those people on. Everyone who gets here sees the same button.
+        */}
+        <div className="mt-6 flex flex-col gap-4 rounded-xl border border-border bg-surface-alt p-6 sm:flex-row sm:items-center sm:justify-between lg:p-8">
+          <div className="max-w-xl">
+            <h2 className="flex items-center gap-2 text-base font-semibold tracking-tight">
+              <span aria-hidden="true" className="flex gap-0.5 text-accent-text">
+                {[0, 1, 2, 3, 4].map((i) => (
+                  <StarIcon key={i} className="size-4" />
+                ))}
+              </span>
+              {t.contact.reviewTitle}
+            </h2>
+            <p className="mt-2 text-sm leading-relaxed text-muted">{t.contact.reviewBody}</p>
+          </div>
+          <a
+            href={business.googleReviewUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex shrink-0 items-center justify-center gap-2 rounded-lg bg-accent px-4 py-2.5 text-sm font-semibold text-accent-fg transition hover:brightness-95"
+          >
+            <StarIcon className="size-4" />
+            {t.contact.reviewCta}
+          </a>
         </div>
       </section>
     </>

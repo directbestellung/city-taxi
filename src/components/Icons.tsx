@@ -195,3 +195,12 @@ export function InfoIcon(props: IconProps) {
     </Base>
   );
 }
+
+/** Filled star, for the Google rating and the review button. */
+export function StarIcon(props: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false" {...props}>
+      <path d="m12 2.6 2.9 5.88 6.5.95-4.7 4.58 1.11 6.47L12 17.42l-5.81 3.06 1.11-6.47-4.7-4.58 6.5-.95z" />
+    </svg>
+  );
+}

@@ -44,7 +44,7 @@ const en: Dictionary = {
     menu: "Menu",
     skipToContent: "Skip to content",
     backHome: "Back to the home page",
-    ratingLine: `${business.rating.valueEn} stars from ${business.rating.count} Google reviews`,
+    ratingLine: `${business.rating.valueEn} stars on Google`,
   },
 
   home: {
@@ -228,6 +228,9 @@ const en: Dictionary = {
     whatsappBody: "Send us the pick-up point and time and we will confirm.",
     onlineTitle: "Book online",
     onlineBody: "Planning a trip for later? Use the booking form.",
+    reviewCta: "Review us on Google",
+    reviewTitle: "Happy with the ride?",
+    reviewBody: "A short Google review helps other passengers find us — and helps us get better.",
     addressTitle: "Address",
   },
 

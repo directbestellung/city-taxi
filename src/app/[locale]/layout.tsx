@@ -35,6 +35,14 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
     <html
       lang={t.htmlLang}
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      /*
+       * The script below stamps data-welcome onto this element before React
+       * hydrates, so the client <html> has an attribute the server never sent.
+       * That is the point of the script, not a bug — suppress the warning it
+       * would otherwise log on every page load. This only covers this element's
+       * own attributes; everything inside still hydrates and warns normally.
+       */
+      suppressHydrationWarning
     >
       <head>
         {/*
