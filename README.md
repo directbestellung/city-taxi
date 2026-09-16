@@ -157,6 +157,32 @@ Navigation, sitemap, and hreflang pick it up automatically.
 
 ---
 
+## Cookie banner and tracking
+
+`src/lib/consent.ts` holds the switch. It is **off**, because the site loads no
+trackers — a banner announcing cookies that do not exist is its own kind of
+wrong, and an accepted banner with nothing behind it teaches visitors the
+choice is meaningless.
+
+To add Meta Pixel, Google Ads or Analytics:
+
+1. Set `trackingPlanned = true`
+2. Load your tags **only** behind `hasConsent()` — never on page load. Under
+   TTDSG §25 they may not run before the visitor agrees.
+3. Uncomment the tracking section in the privacy policy (both languages) and
+   name every service you actually run.
+
+**Accept and Decline are deliberately the same size.** A single "OK" button is
+lawful only while nothing non-essential is set; with trackers in place, GDPR and
+TTDSG require refusing to be as easy as agreeing, and an accept-only bar is the
+pattern German regulators fine. Shrinking Decline is not a safe optimisation.
+
+The choice lives in `localStorage`, not a cookie — storing a cookie in order to
+ask about cookies is a contradiction.
+
+Visitors can request deletion of their data by email; that route is set out on
+the privacy page in both languages.
+
 ## The logo
 
 `public/logo/` holds two variants of the mark and `src/lib/logo.ts` maps each to

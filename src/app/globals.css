@@ -80,3 +80,9 @@ section[id] {
     scroll-behavior: auto;
   }
 }
+
+/* While the consent bar is on screen, lift the floating button clear of it.
+   Browsers without :has() simply leave the button where it is. */
+body:has([data-cookie-banner]) [data-whatsapp-fab] {
+  bottom: 6.5rem;
+}

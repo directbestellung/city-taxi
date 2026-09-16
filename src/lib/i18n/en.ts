@@ -331,6 +331,27 @@ const en: Dictionary = {
         ],
       },
       {
+        heading: "Deleting your data",
+        body: [
+          "You can ask us at any time to delete the personal data we hold about you. An informal email to toptaxikl@gmail.com with the subject \"Data deletion\" is enough; please include your name and the phone number or email address you booked with, so we can find the right records.",
+          "We will confirm the deletion. If a statutory retention period — a tax one, for example — prevents us deleting something immediately, we will tell you which data is affected and when it will go. Processing is restricted in the meantime.",
+          "The same applies to access, correction, and data portability: an email to the same address is all it takes.",
+        ],
+      },
+      /**
+       * TODO — uncomment together with `trackingPlanned` in src/lib/consent.ts,
+       * and name every service you actually add.
+       *
+       * {
+       *   heading: "Statistics and marketing (only with your consent)",
+       *   body: [
+       *     "With your consent we use Google Analytics, Google Ads, and the Meta pixel to analyse how this site is used and to measure how well ads perform. These services set cookies and transmit data to Google Ireland Limited and Meta Platforms Ireland Limited respectively; transfer to the USA cannot be ruled out.",
+       *     "The legal basis is your consent under Art. 6(1)(a) GDPR and § 25(1) TTDSG. Without consent these services are not loaded at all.",
+       *     "You can withdraw your consent at any time with future effect. Clear this site's stored data in your browser and you will be asked again on your next visit.",
+       *   ],
+       * },
+       */
+      {
         heading: "Your rights",
         body: [
           "You have the right of access (Art. 15 GDPR), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20), and the right to object (Art. 21 GDPR).",
@@ -885,6 +906,15 @@ const en: Dictionary = {
         },
       ] as LandingBlock[],
     },
+  },
+
+  consent: {
+    message:
+      "We use cookies for statistics and marketing — only with your consent.",
+    accept: "Accept",
+    decline: "Decline",
+    more: "Privacy",
+    ariaLabel: "Cookie notice",
   },
 
   notFound: {

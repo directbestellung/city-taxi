@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import CookieBanner from "@/components/layout/CookieBanner";
 import WhatsAppFab from "@/components/layout/WhatsAppFab";
 import { business, siteUrl } from "@/lib/business";
 import { getDictionary } from "@/lib/i18n";
@@ -47,6 +48,7 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
         </main>
         <Footer locale={locale} />
         <WhatsAppFab locale={locale} />
+        <CookieBanner locale={locale} />
       </body>
     </html>
   );

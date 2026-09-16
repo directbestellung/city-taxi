@@ -334,6 +334,28 @@ const de = {
         ],
       },
       {
+        heading: "Löschung Ihrer Daten",
+        body: [
+          "Sie können jederzeit verlangen, dass wir die zu Ihrer Person gespeicherten Daten löschen. Eine formlose E-Mail an toptaxikl@gmail.com mit dem Betreff „Datenlöschung“ genügt; nennen Sie darin bitte Ihren Namen und die Telefonnummer oder E-Mail-Adresse, unter der Sie bei uns bestellt haben, damit wir die Daten zuordnen können.",
+          "Wir bestätigen Ihnen die Löschung. Sollten gesetzliche Aufbewahrungsfristen — etwa steuerliche — einer sofortigen Löschung entgegenstehen, sagen wir Ihnen, welche Daten davon betroffen sind und wann sie gelöscht werden. Die Verarbeitung wird in diesem Fall eingeschränkt.",
+          "Dasselbe gilt für Auskunft, Berichtigung und Datenübertragbarkeit: eine E-Mail an dieselbe Adresse reicht aus.",
+        ],
+      },
+      /**
+       * TODO — uncomment together with `trackingPlanned` in src/lib/consent.ts,
+       * and name every service you actually add. Listing a tracker you do not
+       * run is as wrong as running one you do not list.
+       *
+       * {
+       *   heading: "Statistik und Marketing (nur mit Ihrer Einwilligung)",
+       *   body: [
+       *     "Mit Ihrer Einwilligung setzen wir Google Analytics, Google Ads und den Meta-Pixel ein, um die Nutzung dieser Website auszuwerten und die Wirksamkeit von Anzeigen zu messen. Diese Dienste setzen Cookies und übermitteln Daten an Google Ireland Limited beziehungsweise Meta Platforms Ireland Limited; eine Übermittlung in die USA ist dabei nicht ausgeschlossen.",
+       *     "Rechtsgrundlage ist Ihre Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG. Ohne Einwilligung werden diese Dienste nicht geladen.",
+       *     "Sie können Ihre Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen. Löschen Sie dazu die Website-Daten dieser Seite in Ihrem Browser; beim nächsten Besuch werden Sie erneut gefragt.",
+       *   ],
+       * },
+       */
+      {
         heading: "Ihre Rechte",
         body: [
           "Sie haben das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) sowie ein Widerspruchsrecht (Art. 21 DSGVO).",
@@ -888,6 +910,15 @@ const de = {
         },
       ] as LandingBlock[],
     },
+  },
+
+  consent: {
+    message:
+      "Wir nutzen Cookies für Statistik und Marketing — nur mit Ihrer Zustimmung.",
+    accept: "Akzeptieren",
+    decline: "Ablehnen",
+    more: "Datenschutz",
+    ariaLabel: "Hinweis zu Cookies",
   },
 
   notFound: {
