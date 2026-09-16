@@ -49,6 +49,26 @@ export default async function LocaleLayout({ children, params }: LayoutProps<"/[
           Runs before first paint: if this session has already been greeted, the
           splash is hidden by CSS straight away rather than rendering and then
           being removed, which would flash on every page load.
+
+          This has to be a bare <script>, and React logs "Encountered a script
+          tag while rendering React component" for it. That warning is worth
+          understanding rather than silencing:
+
+           - It is development-only. The string lives solely in React's
+             .development build and never reaches production, and React sets an
+             internal flag after the first one, so it is a single line per page
+             load, not one per navigation.
+           - What it warns about does not apply here. React declines to execute
+             an inline script when it renders one on the CLIENT. We only need
+             this on the server render: the browser runs it while parsing the
+             initial HTML, and the attribute it sets stays on <html> for the
+             life of the document, so client navigations never need it again.
+           - next/script with strategy="beforeInteractive" is NOT a substitute,
+             despite being the obvious fix. It does not emit a running script —
+             it pushes the source onto Next's __next_s queue, which an async
+             runtime chunk drains later. Every Next chunk is async, so the code
+             would run after first paint, which is the exact flash this exists
+             to prevent. Checked against the built HTML; do not swap it back.
         */}
         <script
           dangerouslySetInnerHTML={{
