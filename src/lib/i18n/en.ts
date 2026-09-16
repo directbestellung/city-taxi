@@ -239,7 +239,7 @@ const en: Dictionary = {
         heading: "Information pursuant to § 5 DDG",
         body: [
           business.legalName,
-          "[Owner: first and last name]",
+          business.owner,
           `${business.street}`,
           `${business.postalCode} ${business.city}`,
           "Germany",
@@ -291,7 +291,7 @@ const en: Dictionary = {
         body: [
           "The controller for data processing on this website is:",
           business.legalName,
-          "[Owner: first and last name]",
+          business.owner,
           `${business.street}, ${business.postalCode} ${business.city}`,
           `Phone: ${business.phoneDisplay}`,
           "Email: {email}",

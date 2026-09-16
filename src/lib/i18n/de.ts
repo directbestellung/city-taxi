@@ -239,7 +239,7 @@ const de = {
         heading: "Angaben gemäß § 5 DDG",
         body: [
           business.legalName,
-          "[Inhaberin / Inhaber: Vor- und Nachname]",
+          business.owner,
           `${business.street}`,
           `${business.postalCode} ${business.city}`,
           "Deutschland",
@@ -294,7 +294,7 @@ const de = {
         body: [
           "Verantwortlich für die Datenverarbeitung auf dieser Website ist:",
           business.legalName,
-          "[Inhaberin / Inhaber: Vor- und Nachname]",
+          business.owner,
           `${business.street}, ${business.postalCode} ${business.city}`,
           `Telefon: ${business.phoneDisplay}`,
           "E-Mail: {email}",
@@ -962,7 +962,7 @@ const de = {
     medical: {
       title: "Krankenfahrten Kaiserslautern",
       description:
-        `Sitzende Krankenfahrten in Kaiserslautern: Dialyse, Chemotherapie, Arzttermine und Klinik. Wir fahren für alle Krankenkassen. Jetzt anrufen unter ${business.phoneDisplay}.`,
+        `Sitzende Krankenfahrten in Kaiserslautern: Dialyse, Chemotherapie, Arzt und Klinik. Wir fahren für alle Krankenkassen. Tel. ${business.phoneDisplay}.`,
     },
     airport: {
       title: "Flughafentransfer ab Kaiserslautern",

@@ -1,7 +1,7 @@
 import { business } from "@/lib/business";
 import { getDictionary } from "@/lib/i18n";
 import type { Locale } from "@/lib/i18n/routes";
-import { CheckIcon } from "@/components/Icons";
+import { AppleIcon, CheckIcon, GooglePlayIcon } from "@/components/Icons";
 
 /**
  * Ordering through the taxi.de app.
@@ -53,16 +53,18 @@ export default function AppOrder({ locale }: { locale: Locale }) {
                 href={business.appStoreUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="flex w-full items-center justify-center rounded-lg bg-fg px-4 py-3 text-sm font-semibold text-bg transition hover:opacity-90"
+                className="flex w-full items-center justify-center gap-2.5 rounded-lg bg-fg px-4 py-3 text-sm font-semibold text-bg transition hover:opacity-90"
               >
+                <AppleIcon className="size-4" />
                 {t.app.appStore}
               </a>
               <a
                 href={business.playStoreUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="flex w-full items-center justify-center rounded-lg border border-border px-4 py-3 text-sm font-semibold transition hover:bg-surface"
+                className="flex w-full items-center justify-center gap-2.5 rounded-lg border border-border px-4 py-3 text-sm font-semibold transition hover:bg-surface"
               >
+                <GooglePlayIcon className="size-4" />
                 {t.app.playStore}
               </a>
             </div>

@@ -1,5 +1,5 @@
 import type { LandingBlock } from "@/lib/i18n/types";
-import { ChevronIcon } from "@/components/Icons";
+import { ChevronIcon, InfoIcon } from "@/components/Icons";
 
 /** Renders the content blocks an SEO landing page is assembled from. */
 export default function LandingSections({
@@ -12,7 +12,10 @@ export default function LandingSections({
       <div className="space-y-12">
         {blocks.map((block) => (
           <section key={block.heading}>
-            <h2 className="text-2xl font-semibold tracking-tight text-balance">
+            <h2 className="flex items-start gap-2.5 text-2xl font-semibold tracking-tight text-balance">
+              {block.type === "note" ? (
+                <InfoIcon className="mt-1.5 size-5 shrink-0 text-accent-text" />
+              ) : null}
               {block.heading}
             </h2>
 

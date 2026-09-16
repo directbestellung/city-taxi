@@ -11,6 +11,8 @@
 export const business = {
   name: "City Taxi Kaiserslautern",
   legalName: "City Taxi Kaiserslautern",
+  /** Named in the Impressum (§ 5 DDG) and as controller in the privacy policy. */
+  owner: "Toheed Babar",
 
   street: "Pariser Str. 51",
   postalCode: "67655",
