@@ -19,7 +19,7 @@ export default function Wordmark({
   size?: "header" | "footer";
 }) {
   const isFooter = size === "footer";
-  const sizeClass = isFooter ? "h-11 sm:h-14" : "h-9 sm:h-11";
+  const sizeClass = isFooter ? "h-11 sm:h-14" : "h-10 sm:h-12";
 
   if (logo) {
     const mark = (variant: BrandLogo, className: string) => (
